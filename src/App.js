@@ -9,22 +9,23 @@ import Login from './Components/Login'
 import Singandlog2 from './Components/Singandlog2';
 import { Link } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
+import RegisterKids from './Components/RegisterKids';
 function App() {
   return (
     <div className="App">
 
-<Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
+{/* <Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
   Chakra Design system <ExternalLinkIcon mx='2px' />
-</Link>
+</Link> */}
 
 
-<Navbar/>
-<Singandlog2/>
-<Search />
-<Signup/>
-<Login/>
-<Footer/>
-     
+{/* <Navbar/> */}
+{/* <Singandlog2/> */}
+{/* <Search /> */}
+{/* <Signup/> */}
+{/* <Login/> */}
+{/* <Footer/> */}
+     <RegisterKids />
 
     </div>
 

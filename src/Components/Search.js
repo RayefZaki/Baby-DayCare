@@ -28,11 +28,7 @@ export default function Search(){
 
                })
             },[]);
-            
-        // let a =()=>{
-            
-        //    arr.filter((ele) => ele.course.toLowerCase().includes(arr) ||
-        //    ele.course.toUpperCase().includes(arr)).map((ele) => {const [Search, setSearch] = useState(ele.course)}) 
+           
            
       return(
 
