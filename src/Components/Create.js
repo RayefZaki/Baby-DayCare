@@ -22,13 +22,17 @@ function Create() {
         // navigate('/GitCreate');
     }
   return (
-    <div>
+    <div className='Create'>
 
 
         <input placeholder='Course Name' onChange={e=>{setCourse(e.target.value) }}></input>
+        <br/>
         <input placeholder='Short Description' onChange={e=>{setShortDesc(e.target.value) }}></input>
+        <br/>
         <input placeholder='Description' onChange={e=>{setDescription(e.target.value) }}></input>
+        <br/>
         <input placeholder='City' onChange={e=>{setCity(e.target.value) }}></input>
+        <br/>
         <button onClick={postData}>Add New Course</button>
 
 

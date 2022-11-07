@@ -1,3 +1,7 @@
 .Nav{
     background-color: aqua;
 }
+.Create{
+  border: 5px solid black;
+  /* display: flex; */
+}

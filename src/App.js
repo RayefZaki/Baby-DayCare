@@ -2,7 +2,6 @@ import './App.css';
 import Navbar from './Components/Navbar'
 import { ChakraProvider } from '@chakra-ui/react'
 import Footer from './Components/Footer'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Create from './Components/Create';
 
 function App() {
