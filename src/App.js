@@ -3,23 +3,27 @@ import Navbar from './Components/Navbar'
 import { ChakraProvider } from '@chakra-ui/react'
 import Footer from './Components/Footer'
 import Create from './Components/Create';
-
 import Search from './Components/Search';
-import Siginandlogin from './Components/Siginandlogin';
 import Signup from './Components/Signup'
 import Login from './Components/Login'
-
+import Singandlog2 from './Components/Singandlog2';
+import { Link } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 function App() {
   return (
     <div className="App">
+
+<Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
+  Chakra Design system <ExternalLinkIcon mx='2px' />
+</Link>
+
+
 <Navbar/>
-
-<Siginandlogin/>
-
+<Singandlog2/>
 <Search />
 <Signup/>
 <Login/>
-
+<Footer/>
      
 
     </div>

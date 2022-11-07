@@ -43,6 +43,7 @@ export default function Search(){
            
 
       return(
+        <div id="search1">
         <div className="search">
             <Center>
             <Input 
@@ -50,11 +51,7 @@ export default function Search(){
              marginTop={"5"}
              onChange={(e) => setSearch(e.target.value)} type={"text"}>
              </Input><br></br>
-<h1>jghgjhghjfhfgfgf
-    jkjkjkjkjkj
-    jkjjhjkhjkh
-    jkjkjkjkjkj
-</h1>
+
 
 
 
@@ -152,6 +149,6 @@ export default function Search(){
 
 
 
-
+        </div>
       )
 }
