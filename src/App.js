@@ -4,14 +4,16 @@ import { ChakraProvider } from '@chakra-ui/react'
 import Footer from './Components/Footer'
 import Create from './Components/Create';
 import Signup from './Components/Signup'
+import Login from './Components/Login'
 
 function App() {
   return (
     <div className="App">
 <Navbar/>
-      <h2>hjhjhjh</h2>
-      <Create></Create>
-<Signup/>
+      {/* <Create></Create> */}
+{/* <Signup/> */}
+<Login/>
+
      
 
     </div>
