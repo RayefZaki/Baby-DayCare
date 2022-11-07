@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState , useEffect} from "react";
 import {
   Box,
   Center,
@@ -14,59 +14,53 @@ import {
 } from '@chakra-ui/react';
 import "./Search.css"
 import { Link } from "react-router-dom";
+import axios, { Axios } from "axios";
 export default function Search(){
-
-            let arr = [
-              {
-                id:"001",
-                course: "JavaScript",
-                disc:"skalsaa skldmckas sal;mc;  ls;mcl;asm sl;ml; slml;sm l;msl;ml;sdml;",
-                img:"https://cdn.discordapp.com/attachments/1032613167446102037/1038783659752292422/baby.jpg",
-              },
-              {
-                id:"002",
-                disc:"skalsaa skldmckas sal;mc;   ls;mcl;asm sl;ml; slml;sm l;msl;ml;sdml;",
-                course: "Java",
-                img:"https://cdn.discordapp.com/attachments/1032613167446102037/1038783659752292422/baby.jpg",
-              },
-              {
-                id:"003",
-                course: "PHP",
-                disc:"skalsaa skldmckas sal;mc;   ls;mcl;asm sl;ml; slml;sm l;msl;ml;sdml;",
-                img:"https://cdn.discordapp.com/attachments/1032613167446102037/1038783659752292422/baby.jpg",
-              },
-             
-            ]
-
-            const [search, setSearch] = useState("");
-
            
+            
+            const [arr, setArr] = useState([]);
+            const [search, setSearch] = useState('');
+            
+            useEffect(() => {
+               axios.get(`https://6362424b7521369cd068e00e.mockapi.io/DayCare`).then((res)=>{
+                console.log(res.data)
+                setArr(res.data)
 
+               })
+            },[]);
+            
+        // let a =()=>{
+            
+        //    arr.filter((ele) => ele.course.toLowerCase().includes(arr) ||
+        //    ele.course.toUpperCase().includes(arr)).map((ele) => {const [Search, setSearch] = useState(ele.course)}) 
+           
       return(
+        
         <div className="search">
+            {}
             <Center>
             <Input 
              placeholder="Search" width={"100"} 
              marginTop={"5"}
              onChange={(e) => setSearch(e.target.value)} type={"text"}>
-             </Input><br></br>
-<h1>jghgjhghjfhfgfgf
-    jkjkjkjkjkj
-    jkjjhjkhjkh
-    jkjkjkjkjkj
-</h1>
+                
+             </Input>
+
 
 
 
              </Center>
         
         <div className="card">
+        
           
         {arr.filter((ele) => ele.course.toLowerCase().includes(search) ||
            ele.course.toUpperCase().includes(search)).map((ele) => (
+           
 
-            <Center py={6}>
-            <Stack
+            <div className="h"> 
+            <Center py={6} >
+            <Stack 
               borderWidth="1px"
               borderRadius="lg"
               w={{ sm: '100%', md: '540px' }}
@@ -80,11 +74,11 @@ export default function Search(){
                   objectFit="cover"
                   boxSize="100%"
                   src={
-                    ele.img
+                    "https://cdn.discordapp.com/attachments/1032613167446102037/1038783659949432892/Babay_daycare.jpg"
                   }
                 />
-              </Flex>
-              <Stack
+              </Flex >
+              <Stack 
                 flex={1}
                 flexDirection="column"
                 justifyContent="center"
@@ -95,11 +89,11 @@ export default function Search(){
                  {ele.course}
                 </Heading>
                 
-                <Text
-                  textAlign={'center'}
+                <Text 
+                  textAlign={'center'} noOfLines={"5"}
                   color={('gray.700', 'gray.400')}
                   px={3}>
-                  {ele.disc}
+                  {ele.shortDesc}
                 </Text>
                
       
@@ -119,7 +113,8 @@ export default function Search(){
                     }}>
                     Discrption
                   </Button>
-                  <Button
+                  
+                  <Button 
                     flex={1}
                     fontSize={'sm'}
                     rounded={'full'}
@@ -136,11 +131,12 @@ export default function Search(){
                     }}>
                     Join
                   </Button>
+               
                 </Stack>
               </Stack>
             </Stack>
           </Center>
-        
+          </div>
           
               )
               
