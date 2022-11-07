@@ -10,12 +10,23 @@ const Navbar = () => {
     const handleClick = () => setClick(!click)
 
     const closeMenu = () => setClick(false)
+const [navbar,setNavbar]=useState (false);
 
+
+const changebk = ()=>{
+if(window.scrollY>=80) {setNavbar(true)
+}else{
+    setNavbar(false)
+}
+
+}         
+
+window.addEventListener('scroll',changebk);
     return (
         <div className='header'>
-            <nav className='navbar'>
+            <nav className={navbar? 'navbar active':'navbar'}>
                 {/* <a href='/' className='logo'> */}
-                    {/* <img src={logo} alt='logo' /> */}
+                    {/* <img  width={10} src='https://cdn.discordapp.com/attachments/1032613167446102037/1039311430899466260/unknown.png'alt='logo' /> */}
                 {/* </a> */}
                 <div className='hamburger' onClick={handleClick}>
                     {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
