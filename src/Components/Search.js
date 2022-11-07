@@ -35,7 +35,9 @@ export default function Search(){
         //    ele.course.toUpperCase().includes(arr)).map((ele) => {const [Search, setSearch] = useState(ele.course)}) 
            
       return(
-        
+
+        <div id="search1">
+
         <div className="search">
             {}
             <Center>
@@ -45,6 +47,8 @@ export default function Search(){
              onChange={(e) => setSearch(e.target.value)} type={"text"}>
                 
              </Input>
+             {/* </Input><br></br> */}
+
 
 
 
@@ -148,6 +152,6 @@ export default function Search(){
 
 
 
-
+        </div>
       )
 }

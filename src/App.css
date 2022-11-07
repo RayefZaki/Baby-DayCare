@@ -1,7 +1,18 @@
 .Nav{
-    background-color: aqua;
+display: flex;
+justify-content: space-between;
 }
 .Create{
   border: 5px solid black;
   /* display: flex; */
+}
+.collapse navbar-collapse{
+display: flex;
+justify-content: space-between
+;
+background-color: aquamarine;
+}
+.parent-btn2{
+  display: flex;
+  justify-content: end;
 }

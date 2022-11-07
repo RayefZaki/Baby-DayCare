@@ -1,41 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FaBars, FaTimes } from 'react-icons/fa'
+// import logo from './images/logo.png'
 
-function Navbar  () {
-  return (
-    <div className='Nav'>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-<img width={77} src='https://cdn.discordapp.com/attachments/1032613167446102037/1038861978116038667/unknown.png'></img>
+import './Navbar.css'
 
+const Navbar = () => {
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-Login
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">New accouint</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+    const [click, setClick] = useState(false)
+    const handleClick = () => setClick(!click)
+
+    const closeMenu = () => setClick(false)
+
+    return (
+        <div className='header'>
+            <nav className='navbar'>
+                {/* <a href='/' className='logo'> */}
+                    {/* <img src={logo} alt='logo' /> */}
+                {/* </a> */}
+                <div className='hamburger' onClick={handleClick}>
+                    {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
+                        : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
+
+                </div>
+                <ul className={click ? "nav-menu active" : "nav-menu"}>
+                    <li className='nav-item'>
+                        <a href='/' onClick={closeMenu}>Home</a>
+                    </li>
+                    <li className='nav-item'>
+                        <a spy={true} smooth={true} offset={50} duration={500} githref='#footer' onClick={closeMenu}>About</a>
+                    </li>
+                    <li className='nav-item'>
+                        <a href='#search1' onClick={closeMenu}>Programs</a>
+                    </li>
+                    <li className='nav-item'>
+                        <a href='#demo' onClick={closeMenu}>our servise</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-      </li>
-    </ul>
-  </div>
-</nav>
-    </div>
-  )
+    )
 }
 
 export default Navbar
-
-
