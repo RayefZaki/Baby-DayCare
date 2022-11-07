@@ -1,93 +1,41 @@
-// import { ReactNode } from 'react';
+import React from 'react'
 
-// import {
-//   Box,
-//   Flex,
-//   Avatar,
-//   HStack,
-//   Link,
-//   IconButton,
-//   Button,
-//   Menu,
-//   MenuButton,
-//   MenuList,
-//   MenuItem,
-//   MenuDivider,
-//   useDisclosure,
-//   useColorModeValue,
-//   Stack,
-// } from '@chakra-ui/react';
-// import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+function Navbar  () {
+  return (
+    <div className='Nav'>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<img width={77} src='https://cdn.discordapp.com/attachments/1032613167446102037/1038861978116038667/unknown.png'></img>
 
-// const Links = ['Home', 'Classes', 'Our team'];
 
-// const NavLink = ({ children }: { children: ReactNode }) => (
-//   <Link
-//     px={2}
-//     py={1}
-//     rounded={'md'}
-//     _hover={{
-//       textDecoration: 'none',
-//       bg: useColorModeValue('yellow.200', 'yellow.700'),
-//     }}
-//     href={'www.google.com'}>
-//     {children}
-//   </Link>
-// );
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Login
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">New accouint</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+    </div>
+  )
+}
 
-// export default function Simple() {
-//   const { isOpen, onOpen, onClose } = useDisclosure();
+export default Navbar
 
-//   return (
-//     <>
-//       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-//         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-//           <IconButton
-//             size={'md'}
-//             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-//             aria-label={'Open Menu'}
-//             display={{ md: 'none' }}
-//             onClick={isOpen ? onClose : onOpen}
-//           />
-//           <HStack spacing={8} alignItems={'center'}>
-//             <Box> <img width={80} src='https://cdn.discordapp.com/attachments/1032613167446102037/1038861978116038667/unknown.png'></img></Box>
-//             <HStack
-//               as={'nav'}
-//               spacing={4}
-//               display={{ base: 'none', md: 'flex' }}>
-//               {Links.map((link) => (
-//                 <NavLink key={link}>{link}</NavLink>
-//               ))}
-//             </HStack>
-//           </HStack>
-//           <Flex alignItems={'center'}>
-//             <Menu>
-//               <MenuButton
-//                 as={Button}
-//                 rounded={'full'}
-//                 variant={'link'}
-//                 cursor={'pointer'}
-//                 minW={0}>
-//                 <Avatar
-//                   size={'sm'}
-//                   src={
-//                     'https://cdn.discordapp.com/attachments/1032613167446102037/1038861978116038667/unknown.png'
-//                   }
-//                 />
-//               </MenuButton>
-//               <MenuList>
-//                 <MenuItem > login 1</MenuItem>
-//                 <MenuItem>sing in 2</MenuItem>
-//                 <MenuDivider />
-//                 <MenuItem>Link 3</MenuItem>
-//               </MenuList>
-//             </Menu>
-//           </Flex>
-//         </Flex>
 
-//       </Box>
-
-  
-//     </>
-//   );
-// }
