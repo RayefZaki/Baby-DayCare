@@ -49,7 +49,15 @@ export default function Search(){
              placeholder="Search" width={"100"} 
              marginTop={"5"}
              onChange={(e) => setSearch(e.target.value)} type={"text"}>
-             </Input>
+             </Input><br></br>
+<h1>jghgjhghjfhfgfgf
+    jkjkjkjkjkj
+    jkjjhjkhjkh
+    jkjkjkjkjkj
+</h1>
+
+
+
              </Center>
         
         <div className="card">
