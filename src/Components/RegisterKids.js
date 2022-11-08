@@ -21,7 +21,7 @@ import {
 export default function RegisterKids() {
 
     let url = "https://636242497521369cd068dfd3.mockapi.io/ToDo"
-    // const [names,setNames]=useState({email:"",password:""})
+    
   
   
     const [FullName, setFullName] = useState("")
@@ -50,7 +50,7 @@ export default function RegisterKids() {
     <div className='Child'>
         <div className='parent'>
         <div className='anm'>
-        <img src='https://cdn.discordapp.com/attachments/1032613167446102037/1038861978116038667/unknown.png'></img>
+        <img className='img' src='https://cdn.discordapp.com/attachments/1032613167446102037/1038861978116038667/unknown.png'></img>
         </div>
         <div>
       <Flex   
@@ -62,7 +62,7 @@ export default function RegisterKids() {
   bg={useColorModeValue('gray.50', 'gray.800')}>
   <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
     <Stack align={'center'}>
-      <Heading fontSize={'4xl'}>Sign in to your child</Heading>
+      <Heading fontSize={'4xl'}>Information Child</Heading>
       
     </Stack>
     <Box
@@ -79,7 +79,7 @@ export default function RegisterKids() {
         </FormControl>
         <FormControl id="password">
           <FormLabel>Age Child</FormLabel>
-          <Input onChange ={e =>{ setAge(e.target.value)}} type="password" />
+          <Input onChange ={e =>{ setAge(e.target.value)}} type="text" />
         </FormControl>
         <Stack spacing={10}>
           {/* <Stack

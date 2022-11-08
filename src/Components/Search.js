@@ -37,12 +37,14 @@ export default function Search(){
         <div className="search">
             {}
             <Center>
-            <Input 
-             placeholder="Search" width={"100"} 
-             marginTop={"5"}
+             
+            <input className="input" color={"white"}
+             placeholder ="search" 
              onChange={(e) => setSearch(e.target.value)} type={"text"}>
                 
-             </Input>
+             </input>
+             <div className="one"></div>
+             <div className="two"></div>
              {/* </Input><br></br> */}
 
 
