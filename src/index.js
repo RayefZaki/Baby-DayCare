@@ -13,12 +13,8 @@ import { BrowserRouter as Router} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<<<<<<< HEAD
-  
-=======
     <Router>
 
->>>>>>> cd7e6767d152e6464c49da60db8c636101145ec5
         <ChakraProvider>
 
     <App />
