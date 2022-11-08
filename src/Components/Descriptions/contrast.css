@@ -1,0 +1,44 @@
+.con{
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: 0px auto;
+    /* transform: scale(1.1); */
+    margin-top: 5px;
+  }
+
+  .contrast{
+   
+   height: 100vh; /* background-color: black; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://cdn.discordapp.com/attachments/1032613167446102037/1039496802879160410/pexels-moose-photos-1037993.jpg");
+  }
+
+  .diaper{
+    background-color: beige;
+   text-align: center;
+    height: 100vh;
+
+  }
+  .a{
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+  .a p{
+    margin-top: 20px;
+    margin-left: 5px;
+  }
+  .a h4{
+    border: 2px solid orange;
+    border-radius: 100%;
+    width: 90px;
+    padding: 13px;
+    text-align: center;
+    margin:5px
+
+  }
+
+  .finan{
+    background-color: beige;
+  }
