@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 import { ChakraProvider } from '@chakra-ui/react'
+import { BrowserRouter as Router} from 'react-router-dom'
+
 
 // import $ from 'jquery';
 // import Popper from 'popper.js';
@@ -12,11 +13,18 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+<<<<<<< HEAD
   
+=======
+    <Router>
+
+>>>>>>> cd7e6767d152e6464c49da60db8c636101145ec5
         <ChakraProvider>
 
     <App />
         </ChakraProvider>
+        </Router>
+
 
 
 
