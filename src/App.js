@@ -13,40 +13,16 @@ import Welcom from './Components/Welcom';
 import RegisterKids from './Components/RegisterKids';
 import IslamicValues from './Components/Descriptions/IslamicValues';
 import Router1 from './Components/Router1';
+import Contrast from './Components/Descriptions/Contrast';
+import DiaperTraining from './Components/Descriptions/diaperTraining';
+import FinancialCulture from './Components/Descriptions/FinancialCulture'
 function App() {
   return (
     <div className="App">
-
-{/* 
-<Navbar/>
-<Singandlog2/>
-<Search />
-<Signup/>
-<Login/>
-<Footer/>
-      */}
-{/* <Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
-  Chakra Design system <ExternalLinkIcon mx='2px' />
-</Link> */}
-
-{/* 
-<Router1/>
-      <Welcom/> */}
-      <Signup/>
-      <Login/>
-      <Footer/>
-
-
-{/* <Singandlog2/> */}
-{/* <Search /> */}
-
-{/* <Signup/> */}
-
-{/* <Footer/> */}
-     {/* <RegisterKids /> */}
-{/* <IslamicValues></IslamicValues> */}
-    </div>
-
+      
+      <Welcom/>
+ 
+</div>
   );
 }
 
