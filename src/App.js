@@ -20,6 +20,7 @@ function App() {
   return (
     <div className="App">
       
+      <Router1/>
       <Welcom/>
  
 </div>

@@ -24,7 +24,7 @@ const Footer = () => {
                     <span className='line'></span>
                     <h3> &copy; 2022 Tuwaiq Acadimy Project</h3>
                     <p>M.A.R.N Team Students In Tuwaiq Acadimy</p>
-                    <p>Majed abdullah</p>
+                    <p>Majed Almajed</p>
                     <p>Anwar Alanzi</p>
                     <p>Rayef Zaki</p>
                     <p>Nawaf Alhmadi</p>
