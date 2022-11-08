@@ -75,12 +75,13 @@ import {
                fontWeight={600}
                color={'white'}
                bg={'blue.400'}
-               href={'#'}
+               href={'#login'}
                _hover={{
                  bg: 'pink.300',
                }}>
               Sign In
             </Button>
+
             <Button
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
@@ -281,6 +282,11 @@ import {
           },
         
         ],
+      },
+      {
+        label: 'Activity',
+        href: '#Activity',
+
       },
 
   ];
