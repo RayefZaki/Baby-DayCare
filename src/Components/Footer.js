@@ -17,11 +17,16 @@ const Footer = () => {
                         <a href='#search1'>Programs</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#demo'>Demo</a>
+                        <a href='#demo'>Contect<br></br>
+                        Phone.No :+966 5555 555 5
+                        <br></br>
+                        twetter : @M.A.R.N
+                        </a>
                     </li>
                 </ul>
                 <div className='bottom'>
                     <span className='line'></span>
+                    
                     <h3> &copy; 2022 Tuwaiq Acadimy Project</h3>
                     <p>M.A.R.N Team Students In Tuwaiq Acadimy</p>
                     <p>Majed abdullah</p>
