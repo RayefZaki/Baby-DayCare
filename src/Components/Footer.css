@@ -14,10 +14,12 @@
 .footer ul {
     display: flex;
     justify-content: center;
+    list-style: none;
 }
 
 .footer li {
     padding: 1rem;
+    list-style: none;
 }
 
 .footer li a {

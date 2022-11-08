@@ -22,7 +22,7 @@ const Footer = () => {
                 </ul>
                 <div className='bottom'>
                     <span className='line'></span>
-                    <p>2020 Execute, Inc. All rights reserved</p>
+                    <p> &copy; 2022 Tuwaiq Acadimy Project</p>
                 </div>
             </div>
         </div>
