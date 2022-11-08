@@ -1,6 +1,6 @@
 import React from 'react'
 
-function diaperTraining() {
+function DiaperTraining() {
   return (
     <>
     <div>diaperTraining</div>
@@ -30,4 +30,4 @@ From the time you wake up until the time you go to sleep. You can forgo the napp
   )
 }
 
-export default diaperTraining
+export default DiaperTraining
