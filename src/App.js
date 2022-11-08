@@ -19,15 +19,15 @@ function App() {
   return (
     <div className="App">
       {/* <DiaperTraining /> */}
-      <FinancialCulture />
+      {/* <FinancialCulture /> */}
 {/* 
 <Navbar/>
 <Singandlog2/>
 <Search />
 <Signup/>
 <Login/>
-<Footer/>
-      */}
+<Footer/> */}
+      
       {/* <Welcom/> */}
 {/* <Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
   Chakra Design system <ExternalLinkIcon mx='2px' />
@@ -35,6 +35,7 @@ function App() {
 {/* <Contrast /> */}
 
 {/* <Navbar/> */}
+<Welcom />
 {/* <Singandlog2/> */}
 {/* <Search /> */}
 {/* <Signup/> */}
