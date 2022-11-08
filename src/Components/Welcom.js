@@ -6,8 +6,11 @@ import Bgimg from './video/production ID_4016504.mp4'
 import Footer from './Footer'
 import Login from './Login'
 import Activites from './Activites'
+
 import Whyt from './Whyt'
 
+
+import AboutUs from './AboutUs';
 function Welcom() {
   return (
     
@@ -20,6 +23,7 @@ function Welcom() {
     <source src={Bgimg} type = "video/mp4" />
 </video>
 <div className='welcome'>
+
   <h1>🅳🅰🆈 🅲🅰🆁🅴
 </h1>
  <p> ...𝑓𝑜𝑟 𝑦𝑜𝑢𝑟 𝑐ℎ𝑖𝑙𝑑𝑟𝑒𝑛 𝑐𝑎𝑟𝑒
@@ -28,9 +32,13 @@ function Welcom() {
  <div>
     
  </div>
+
 </div>
+<AboutUs/>
+
 <h1> Our Acitvity</h1>
 <p>We make sure it's not just daycare</p>
+
 <div id='Activity' className='Activity1'>
 
 <Activites Name ="Trips daycare" Img = 'https://cdn.discordapp.com/attachments/1032613167446102037/1039583611000721408/pexels-thirdman-8926648.jpg'/>
@@ -41,7 +49,14 @@ function Welcom() {
 </div>
 
 <Whyt/>
+=======
+
+{/* <Login/> */}
+<div>
+
+</div>
 <Footer/>
+
 
 
     </div>
