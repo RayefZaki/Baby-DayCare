@@ -10,14 +10,15 @@ function Welcom() {
     <div className='video'>
         <Navbar/>
 
-<video autoPlay loop muted>
 
-
+<video className='vd' autoPlay loop muted>
+ 
     <source src={Bgimg} type = "video/mp4" />
-    <div className='text1'>
-        <h1>Welcom</h1>
-    </div>
 </video>
+<div className='welcome'>
+  <h1>Welcome</h1>
+  <p>Hello Majed </p>
+</div>
 <Singandlog2/>
 <Search/>
 

@@ -6,7 +6,7 @@
     
 }
 
-img{
+.img{
     width: 400px;
     animation-name: child;
     animation-duration: 0.6s;
