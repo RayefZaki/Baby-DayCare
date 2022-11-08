@@ -4,16 +4,16 @@ import axios from 'axios'
 
 function Create() {
     const[course,setCourse]=useState()
+    const[imge,setImge]=useState()
     const[shortDesc,setShortDesc]=useState()
-    const[description,setDescription]=useState()
-    const[city,setCity]=useState()
+    const[age,setAge]=useState()
     
     let url = "https://6362424b7521369cd068e00e.mockapi.io/DayCare"
 
     // let navigate = useNavigate();
     const postData=()=>{
         axios.post(url,{
-            course,description,city,shortDesc
+            course,age,shortDesc,imge
 
         }).then(res =>{
             console.log(res)
@@ -27,11 +27,11 @@ function Create() {
 
         <input placeholder='Course Name' onChange={e=>{setCourse(e.target.value) }}></input>
         <br/>
+        <input placeholder='Imge' onChange={e=>{setImge(e.target.value) }}></input>
+        <br/>
         <input placeholder='Short Description' onChange={e=>{setShortDesc(e.target.value) }}></input>
         <br/>
-        <input placeholder='Description' onChange={e=>{setDescription(e.target.value) }}></input>
-        <br/>
-        <input placeholder='City' onChange={e=>{setCity(e.target.value) }}></input>
+        <input placeholder='Age' onChange={e=>{setAge(e.target.value) }}></input>
         <br/>
         <button onClick={postData}>Add New Course</button>
 
