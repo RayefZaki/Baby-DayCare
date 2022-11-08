@@ -18,34 +18,100 @@ import {
   
   
   export default function Login () {
-    let url = "https://636242497521369cd068dfd3.mockapi.io/ToDo"
-    // const [names,setNames]=useState({email:"",password:""})
-  
-  
     const [Email, setEmail] = useState("")
     const [Password, setPassword] = useState("")
+     const [state, setstate] = useState([])
+  useEffect(() => {
+
+    axios.get("https://636242497521369cd068dfd3.mockapi.io/ToDo").then((res) =>{
+      console.log(res.data);
+      setstate(res.data);
+    })
+
+  },[])
+
+
+    let x ;
+  const checkk =()=> state.map(item=>{
+    if (item.Email==Email&&item.Password==Password){
+      console.log("true");
+      alert("wellcome")
+return true
+
+    }    
+    // else { alert("ggggg")
+   
+   
+
+     
+
+
+
+    
+    
+      // alert("wellcome")
   
-    const postData = () => {
-      axios.post(url,{
-          Email,
-          Password
-      }).then(res =>{
-          console.log(res)
-      })
-     }
+    
+  
+    // console.log(item.Email);
+    // return {console.log(item.Email);}
+  })
+  
+    
+    // const gettt = (Email)=> {
+    //   axios.get(`https://636242497521369cd068dfd3.mockapi.io/ToDo/${Email}`).then(res=>{
+    //       setstate(state.map(del => {
+    //        return del.includes( Email) ?"true" : "falses"
+             
+    //       }))
+    //   })
+    // }
+
+
+    // const checks = () =>{axios.get(`https://636242497521369cd068dfd3.mockapi.io/ToDo/${}`).then((res) =>{
+    //   // res.filter(del =>{
+    //     console.log(res.data);
+      
+      // console.log(res);
+
+    // console.log(res);
+      // console.log(res.data);
+
+    // if((res.data.Email===Email)&&(res.data.Password===Password)){
+    //     console.log(res.data.Email);
+
+    //   }
+  
+    // })}
+  
+    // const postData = () => {
+    //   axios.post(url,{
+    //       Email,
+    //       Password
+    //   }).then(res =>{
+    //       console.log(res)
+    //   })
+    //  }
   
     const navigate = useNavigate()
   
     const LogIn =()=>{
+      let f = checkk();
       if(Email.length<1 || Password.length<1){
           alert("Email and Password are required");
-      }else{
-       postData();
+      }else if(f !=true){
+        alert ("wrong")
+       
+      
+
+        // checks()
+        
+      //  postData();
         // navigate('Get');
       }}
   
     return (
-        
+        <div id='login'>
       
       <Flex   
   
@@ -99,5 +165,6 @@ import {
         </Stack>
   
       </Flex>
+      </div>
     );
   }
