@@ -11,9 +11,13 @@ function Welcom() {
         <Navbar/>
 
 <video autoPlay loop muted>
-    <source src={Bgimg} type = "video/mp4" />
-</video>
 
+
+    <source src={Bgimg} type = "video/mp4" />
+    <div className='text1'>
+        <h1>Welcom</h1>
+    </div>
+</video>
 <Singandlog2/>
 <Search/>
 

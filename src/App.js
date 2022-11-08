@@ -32,10 +32,10 @@ function App() {
 {/* <Navbar/> */}
 {/* <Singandlog2/> */}
 {/* <Search /> */}
-{/* <Signup/> */}
+<Signup/>
 {/* <Login/> */}
-{/* <Footer/> */}
      <RegisterKids />
+     <Footer/>
 
     </div>
 
