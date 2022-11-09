@@ -39,7 +39,7 @@ function App() {
 {/* <Contrast /> */}
 {/* <Home /> */}
 {/* <Navbar/> */}
-<Welcom />
+{/* <Welcom /> */}
 {/* <Singandlog2/> */}
 {/* <Search /> */}
 {/* <Signup/> */}
@@ -47,7 +47,8 @@ function App() {
 {/* <Footer/> */}
      {/* <RegisterKids /> */}
 {/* <IslamicValues></IslamicValues> */}
-{/* <Router1/> */}
+<Router1 />
+
     </div>
 
 

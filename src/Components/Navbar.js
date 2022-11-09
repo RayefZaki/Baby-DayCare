@@ -22,10 +22,15 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-  
+  import { useNavigate } from 'react-router-dom';
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
-  
+    const navigate = useNavigate()
+    // useEffect(() => {
+      
+      
+    //   navigate("/Login1")
+    // }, []);
     return (
       <Box >
         <Flex
@@ -69,6 +74,7 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
+              <Link to="/Login1">
             <Button
                display={{ base: 'none', md: 'inline-flex' }}
                fontSize={'sm'}
@@ -81,7 +87,7 @@ import {
                }}>
               Sign In
             </Button>
-
+            </Link>
             <Button
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
