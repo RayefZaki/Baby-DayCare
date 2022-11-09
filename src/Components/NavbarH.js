@@ -258,36 +258,29 @@ import {
   const NAV_ITEMS: Array<NavItem> = [
     {
       label: 'Home',
-
+href : '#'
     },
     {
-      label: 'Programs',
-      children: [
-        {
-          label: 'press to see..',
-          href: '#search1',
-        },
-      
-      ],
-    },
-  
-    {
-        label: 'Hire Designers',
-        children: [
-          {
-            label: 'created by ..',
-
-            subLabel:" M.A.R.N Team",
-            href: '#footer',
-          },
-        
-        ],
-      },
-      {
-        label: 'CHANGE',
+        label: 'Activity',
         href: '#Activity',
 
       },
+      {
+        label: 'About us',
+        href: '#About',
+
+      },
+  {
+   
+            label: 'created by ..',
+
+            subLabel:" M.A.R.N Team",
+            href: '#Footer2',
+          },
+        
+        
+      
+    
 
   ];
   

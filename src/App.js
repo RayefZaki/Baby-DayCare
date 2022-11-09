@@ -16,37 +16,14 @@ import Router1 from './Components/Router1';
 import Contrast from './Components/Descriptions/Contrast';
 import DiaperTraining from './Components/Descriptions/diaperTraining';
 import FinancialCulture from './Components/Descriptions/FinancialCulture'
+import ReadDelete from './Components/ReadDelete';
 import Home from './Components/Home';
 function App() {
   return (
     <div className="App">
 
-      {/* <DiaperTraining /> */}
-      {/* <FinancialCulture /> */}
-{/* 
-<Navbar/>
-<Singandlog2/>
-<Search />
-<Signup/>
-<Login/>
-<Footer/> */}
-      
-{/* <Home/> */}
-      {/* <Welcom/> */}
-{/* <Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
-  Chakra Design system <ExternalLinkIcon mx='2px' />
-</Link> */}
-{/* <Contrast /> */}
-<Home />
-{/* <Navbar/> */}
-{/* <Welcom /> */}
-{/* <Singandlog2/> */}
-{/* <Search /> */}
-{/* <Signup/> */}
-{/* <Login/> */}
-{/* <Footer/> */}
-     {/* <RegisterKids /> */}
-{/* <IslamicValues></IslamicValues> */}
+     <Welcom/>
+
 {/* <Router1/> */}
     </div>
 
@@ -54,7 +31,6 @@ function App() {
       
 
    
-      // <Welcom/>
 
  
 

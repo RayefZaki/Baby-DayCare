@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <div>
 
-      
-      <Slid/>
+<Navbar/>
 
+      <Slid/>
       <Search />
       <Footer />
     </div>
