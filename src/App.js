@@ -15,11 +15,13 @@ import IslamicValues from './Components/Descriptions/IslamicValues';
 import Contrast from './Components/Descriptions/Contrast';
 import DiaperTraining from './Components/Descriptions/diaperTraining';
 import FinancialCulture from './Components/Descriptions/FinancialCulture'
+import ReadDelete from './Components/ReadDelete';
 function App() {
   return (
     <div className="App">
+      <ReadDelete></ReadDelete>
       {/* <DiaperTraining /> */}
-      <FinancialCulture />
+      {/* <FinancialCulture /> */}
 {/* 
 <Navbar/>
 <Singandlog2/>
@@ -33,7 +35,7 @@ function App() {
   Chakra Design system <ExternalLinkIcon mx='2px' />
 </Link> */}
 {/* <Contrast /> */}
-
+<Create></Create>
 {/* <Navbar/> */}
 {/* <Singandlog2/> */}
 {/* <Search /> */}
