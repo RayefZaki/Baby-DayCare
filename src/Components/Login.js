@@ -35,92 +35,45 @@ import {
   },[])
 
 
-    let x ;
-  const checkk =()=> state.map(item=>{
+  // const admin =()=>{
+  //   if((Email=="admin") && (Password==1234)){
+  //     navigate("./admin")
+  //   }
+  //   else {
+  //     LogIn();
+  //   }
+  // }
+   
+  const checkk =()=> state.filter(item=>{
     if (item.Email==Email&&item.Password==Password){
+      // navigate("/Home")
+      // console.log("true");
+      return true
+    }   
+ 
 
-      navigate("/Home")
-      console.log("true");
+    // return (item.Email==Email&&item.Password==Password)
+  
+  })
+  let f;
+    const navigate = useNavigate()
+    const LogIn =()=>{
+     f = checkk();
+     console.log(f);
+      if((Email.length<1 || Password.length<1)){
+          alert("Email or Password is requird");
+      }else if(f.length >0){
+        navigate("/Home")
 
-      
-      
-      // alert("wellcome")
-return true
-
-    }    
-    // else { alert("ggggg")
-   
-   
+    }else if (f!=true){
+      alert ("worong")
 
      
-
-
-
+    }
+    }
     
-    
-      // alert("wellcome")
-  
-    
-  
-    // console.log(item.Email);
-    // return {console.log(item.Email);}
-  })
-  
-    
-    // const gettt = (Email)=> {
-    //   axios.get(`https://636242497521369cd068dfd3.mockapi.io/ToDo/${Email}`).then(res=>{
-    //       setstate(state.map(del => {
-    //        return del.includes( Email) ?"true" : "falses"
-             
-    //       }))
-    //   })
-    // }
-
-
-    // const checks = () =>{axios.get(`https://636242497521369cd068dfd3.mockapi.io/ToDo/${}`).then((res) =>{
-    //   // res.filter(del =>{
-    //     console.log(res.data);
-      
-      // console.log(res);
-
-    // console.log(res);
-      // console.log(res.data);
-
-    // if((res.data.Email===Email)&&(res.data.Password===Password)){
-    //     console.log(res.data.Email);
-
-    //   }
-  
-    // })}
-  
-    // const postData = () => {
-    //   axios.post(url,{
-    //       Email,
-    //       Password
-    //   }).then(res =>{
-    //       console.log(res)
-    //   })
-    //  }
-  
-    const navigate = useNavigate()
-  
-    const LogIn =()=>{
-      let f = checkk();
-      if(Email.length<1 || Password.length<1){
-          alert("Email and Password are required");
-      }else if(f !=true){
-        alert ("Email or Password is wrong")
-       
-      
-
-        // checks()
-        
-      //  postData();
-        // navigate('Get');
-      }}
-  
     return (
-        // <div className='login'>
+   
       
       <div>
         
