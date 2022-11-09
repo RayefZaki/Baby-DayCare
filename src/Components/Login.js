@@ -10,14 +10,18 @@ import {
     Heading,
     Text,
     useColorModeValue,
+    Image
   } from '@chakra-ui/react';
   import {Link} from "react-router-dom";
   import { useNavigate } from 'react-router-dom';
   import React,{useState,useEffect} from 'react'
   import axios from "axios";
+  import NavbarH from "./NavbarH"
   
   
   export default function Login () {
+    
+
     const [Email, setEmail] = useState("")
     const [Password, setPassword] = useState("")
      const [state, setstate] = useState([])
@@ -116,20 +120,67 @@ return true
       }}
   
     return (
-        <div id='login'>
+        // <div className='login'>
       
+      <div>
+        
       <Flex   
-  
+     
+
   
         minH={'100vh'}
         align={'center'}
         justify={'center'}
-        bg={useColorModeValue('gray.50', 'gray.800')}>
+        backgroundRepeat="no-repeat"
+        justifyContent="space-around"
+        flexWrap= "wrap" 
+        bg ="#fffff2"
+
+        // bg={useColorModeValue('gray.50', 'gray.800')}
+        
+        >
+
+{/*           
+          <Box
+          bg='tomato'
+                  bgImage="url('https://cdn.discordapp.com/attachments/1032613167446102037/1039860005542821928/Cute_Colorful_Baby_Daycare_Center_Logo_1.png')"
+                 
+     > 
+      <Stack 
+      bg='tomato'
+      >
+                  </Stack>
+     </Box>
+           */}
+
+         <Box
+         >
+        <Image 
+        h = "400"
+        width = "400px"
+
+        src = {'https://cdn.discordapp.com/attachments/1032613167446102037/1039860005542821928/Cute_Colorful_Baby_Daycare_Center_Logo_1.png'}/>
+          </Box>
+
+         {/* <Box display="flex" alignItems="left" justifyContent="space-between"> */}
+<Box>
+  
+
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Stack align={'center'}>
-            <Heading fontSize={'4xl'}>Sign in to your account</Heading>
+          
+            <Box color={'#f06525'} fontSize={'6xl'} display={"flex"}> 
+            <Text color={'#51b59f'}>🅻</Text>
+            <Text color={'#ffde59'}>🅾</Text>
+            <Text color={'#5271ff'}>🅶</Text>
+            <Text> </Text>
+
+            <Text>  🅸</Text>
+
+            <Text color={'#ffde59'}>🅽</Text>
+             </Box>
             <Text fontSize={'lg'} color={'gray.600'}>
-              to join our website
+            
             </Text>
           </Stack>
           <Box
@@ -168,8 +219,10 @@ return true
             </Stack>
           </Box>
         </Stack>
+        {/* </Box> */}
+        </Box>
   
       </Flex>
-      </div>
+       </div>
     );
   }

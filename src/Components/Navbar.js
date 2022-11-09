@@ -24,7 +24,7 @@ import {
   } from '@chakra-ui/icons';
 import { useNavigate } from 'react-router-dom';
   
-  export default function WithSubnavigation() {
+  export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
     let navigate = useNavigate()
   
@@ -71,9 +71,8 @@ import { useNavigate } from 'react-router-dom';
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-              
-            <Button
-               onClick={()=>navigate("/Login")}
+             <Button
+            onClick={()=>navigate("/Welcom")}
                display={{ base: 'none', md: 'inline-flex' }}
                fontSize={'sm'}
                fontWeight={600}
@@ -82,23 +81,10 @@ import { useNavigate } from 'react-router-dom';
                href={'#login'}
                _hover={{
                  bg: 'pink.300',
-                }}>
-              Log In
+               }}>
+                Log Out
             </Button>
 
-            <Button
-              onClick={()=>navigate("/Signup")}
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'blue.400'}
-              href={'#'}
-              _hover={{
-                bg: 'pink.300',
-              }}>
-              Sign Up
-            </Button>
           </Stack>
         </Flex>
   

@@ -10,15 +10,17 @@ import  Navbar  from './Navbar';
 function Router1() {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <Routes>
 
- <Route exact path="/welcome" element={<Welcom/>} />
+ <Route exact path="/" element={<Welcom/>} />
+
  {/* <Route path="Store" element={<Store/>} /> */}
  {/* <Route path="Get" element={<Get/>} /> */}
  <Route path="/Login" element={<Login/>}/>
  <Route path="/Home" element={<Home/>}/>
  <Route path="/Signup" element={<Signup/>} />
+ <Route path="/Welcom" element={<Welcom/>} />
  
 </Routes>
 </>

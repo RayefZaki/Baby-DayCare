@@ -22,8 +22,10 @@ function App() {
   return (
     <div className="App">
 
+
 {/* <Home></Home> */}
 <Router1/>
+
     </div>
 
 
