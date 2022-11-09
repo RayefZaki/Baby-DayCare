@@ -58,15 +58,36 @@ export default function Signup() {
     }}
 
   return (
-    <Flex
+  
+
+      
+    <Flex 
       minH={'100vh'}
       align={'center'}
       justify={'center'}
-      bg={useColorModeValue('gray.50', 'gray.800')}>
+      bgImage="url('https://cdn.discordapp.com/attachments/1032613167446102037/1039822659845898240/pexels-photo-8923982.jpeg')"
+      // backgroundRepeat="no-repeat"
+      // w ="100%"
+      bgSize="cover"
+      backgroundPosition="center"
+
+      
+      // 🆂🅸🅶🅽 🆄🅿
+      >
+
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
-          <Heading fontSize={'4xl'} textAlign={'center'}>
-            Sign up
+          <Heading fontSize={'6xl'} textAlign={'center'}>
+          <Box color={'#f06525'} fontSize={'6xl'} display={"flex"}> 
+            <Text color={'#51b59f'}>🆂</Text>
+            <Text color={'#ffde59'}>🅸</Text>
+            <Text color={'#5271ff'}>🅶</Text>
+            <Text>  🅽</Text>
+            <Text color={'#ffde59'}>🆄</Text>
+            <Text color={'#51b59f'}>🅿</Text>
+
+             </Box>
+      
           </Heading>
           <Text fontSize={'lg'} color={'gray.600'}>
           </Text>
@@ -124,12 +145,13 @@ export default function Signup() {
             </Stack>
             <Stack pt={6}>
               <Text align={'center'}>
-                Already a user? <Link  color={'blue.400'}><button type="">ggh</button> </Link>
+                Already a user? <Link  color={'blue.400'}><button type="">LogIn</button> </Link>
               </Text>
             </Stack>
           </Stack>
         </Box>
       </Stack>
     </Flex>
+
   );
 }

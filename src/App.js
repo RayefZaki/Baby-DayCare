@@ -27,22 +27,22 @@ function App() {
 <Navbar/>
 <Singandlog2/>
 <Search />
-<Signup/>
+
 <Login/>
 <Footer/> */}
       
-
+      <Signup/>
+      <Login/>
       {/* <Welcom/> */}
 {/* <Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
   Chakra Design system <ExternalLinkIcon mx='2px' />
 </Link> */}
 {/* <Contrast /> */}
-{/* <Home /> */}
+<Home />
 {/* <Navbar/> */}
-<Welcom />
+{/* <Welcom /> */}
 {/* <Singandlog2/> */}
 {/* <Search /> */}
-{/* <Signup/> */}
 {/* <Login/> */}
 {/* <Footer/> */}
      {/* <RegisterKids /> */}
