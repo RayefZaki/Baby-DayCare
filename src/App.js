@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './Components/Navbar'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Divider } from '@chakra-ui/react'
 import Footer from './Components/Footer'
 import Create from './Components/Create';
 import Search from './Components/Search';
@@ -18,10 +18,23 @@ import DiaperTraining from './Components/Descriptions/diaperTraining';
 import FinancialCulture from './Components/Descriptions/FinancialCulture'
 import ReadDelete from './Components/ReadDelete';
 import Home from './Components/Home';
+import Developer from './Components/Developer'
 function App() {
   return (
     <div className="App">
-      <Router1 />
+
+      {/* <Router1 /> */}
+<IslamicValues />
+{/* <Welcom/> */}
+{/* <Router1/> */}
+{/* <IslamicValues/> */}
+{/* <Developer/> */}
+
+
+
+
+      {/* <Router1 /> */}
+
     {/* <Welcom /> */}
      
 
