@@ -21,10 +21,11 @@ import Home from './Components/Home';
 function App() {
   return (
     <div className="App">
+<Welcom/>
+<Router1/>
+{/* <Home/> */}
+{/* <IslamicValues/> */}
 
-     <Welcom/>
-
-{/* <Router1/> */}
     </div>
 
 

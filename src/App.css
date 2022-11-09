@@ -47,4 +47,11 @@ margin-top: 100px;
 .vd{
   filter: brightness(0.8);
 }
-
+.logo{
+  width: 90px;
+  transform: translate(0px,-14px);
+}
+/* .q{
+  display: flex;
+  justify-content: space-between;
+} */

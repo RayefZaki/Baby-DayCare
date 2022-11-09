@@ -27,8 +27,11 @@ import {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
-      <Box >
+      <Box className='q' >
         <Flex
+        position={'relative'}
+        top={'5'}
+        alignItems={'center'}
           bg={useColorModeValue('white', 'white')}
           color={useColorModeValue('black.600', 'black')}
           minH={'60px'}
@@ -56,7 +59,7 @@ import {
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('black', 'black')}>
-              Logo
+              <img className='logo' src='https://cdn.discordapp.com/attachments/1032613167446102037/1039859830233514024/Cute_Colorful_Baby_Daycare_Center_Logo.png'></img>
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
