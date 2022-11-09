@@ -34,7 +34,7 @@ function App() {
 {/* <Footer/> */}
       {/* <Home></Home> */}
 
-      {/* <Welcom/> */}
+      <Welcom/>
 {/* <Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
   Chakra Design system <ExternalLinkIcon mx='2px' />
 </Link> */}

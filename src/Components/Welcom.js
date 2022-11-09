@@ -15,7 +15,7 @@ import { Center } from '@chakra-ui/react'
 function Welcom() {
   return (
     
-    <div className='video'>
+    <div className='video' id='welcome'>
         <Navbar/>
 
 

@@ -72,7 +72,8 @@ import { useNavigate } from 'react-router-dom';
             direction={'row'}
             spacing={6}>
               
-            <Button onClick={()=>navigate("/Login")}
+            <Button
+               onClick={()=>navigate("/Login")}
                display={{ base: 'none', md: 'inline-flex' }}
                fontSize={'sm'}
                fontWeight={600}
@@ -119,9 +120,9 @@ import { useNavigate } from 'react-router-dom';
           <Box key={navItem.label}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
-                <Link
+                <Link 
                   p={2}
-                  href={navItem.href ?? '#'}
+                  href={navItem.href ?? '/Home'}
                   fontSize={'sm'}
                   fontWeight={500}
                   color={linkColor}
@@ -196,7 +197,7 @@ import { useNavigate } from 'react-router-dom';
       p={4}
       display={{ md: 'none' }}>
         {NAV_ITEMS.map((navItem) => (
-          <MobileNavItem key={navItem.label} {...navItem} />
+          <MobileNavItem   />
         ))}
       </Stack>
     );
@@ -219,7 +220,7 @@ import { useNavigate } from 'react-router-dom';
           <Text
             fontWeight={600}
             color={useColorModeValue('gray.600', 'gray.200')}>
-            {label}
+            {}
           </Text>
           {children && (
             <Icon
@@ -282,14 +283,14 @@ import { useNavigate } from 'react-router-dom';
             label: 'created by ..',
 
             subLabel:" M.A.R.N Team",
-            href: '#footer',
+            href: '#Footer2',
           },
         
         ],
       },
       {
         label: 'Activity',
-        href: '#Activity',
+        href: '',
 
       },
 
