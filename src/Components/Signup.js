@@ -20,6 +20,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import Router1 from './Router1'
 import Login from './Login'
+import Navbarlogin from './Navbarlogin'
 
 
 export default function Signup() {
@@ -61,7 +62,9 @@ export default function Signup() {
       // navigate('Get');
     }}
 
-  return (
+  return (<div>
+    <Navbarlogin/>
+
     <Flex
       minH={'100vh'}
       align={'center'}
@@ -135,5 +138,6 @@ export default function Signup() {
         </Box>
       </Stack>
     </Flex>
+    </div>
   );
 }

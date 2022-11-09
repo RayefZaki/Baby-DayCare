@@ -15,6 +15,7 @@ import {
   import { useNavigate } from 'react-router-dom';
   import React,{useState,useEffect} from 'react'
   import axios from "axios";
+  import Navbarlogin from './Navbarlogin'
   
   
   export default function Login () {
@@ -116,8 +117,10 @@ return true
       }}
   
     return (
-        <div id='login'>
-      
+        <div id='login'> 
+           <Navbarlogin/>
+
+
       <Flex   
   
   
