@@ -52,8 +52,12 @@ export default function Signup() {
   const LogIn =()=>{
     if(Email.length<1 || Password.length<1 || Fname.length<1) {
         alert("Please fill All");
+
     }else{
-     postData();
+      postData();
+      // navigate("/Home")
+
+      
       // navigate('Get');
     }}
 
@@ -145,7 +149,7 @@ export default function Signup() {
             </Stack>
             <Stack pt={6}>
               <Text align={'center'}>
-                Already a user? <Link  color={'blue.400'}><button type="">LogIn</button> </Link>
+              <Link  color={'blue.400'}><button onClick={()=>navigate("/Login")} type="">Log in</button> </Link>
               </Text>
             </Stack>
           </Stack>

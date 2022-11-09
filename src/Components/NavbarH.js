@@ -22,11 +22,9 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-import { useNavigate } from 'react-router-dom';
   
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
-    let navigate = useNavigate()
   
     return (
       <Box >
@@ -71,9 +69,7 @@ import { useNavigate } from 'react-router-dom';
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-              
             <Button
-               onClick={()=>navigate("/Login")}
                display={{ base: 'none', md: 'inline-flex' }}
                fontSize={'sm'}
                fontWeight={600}
@@ -82,12 +78,11 @@ import { useNavigate } from 'react-router-dom';
                href={'#login'}
                _hover={{
                  bg: 'pink.300',
-                }}>
-              Log In
+               }}>
+              Sign In
             </Button>
 
             <Button
-              onClick={()=>navigate("/Signup")}
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
@@ -113,16 +108,16 @@ import { useNavigate } from 'react-router-dom';
     const linkColor = useColorModeValue('gray', 'gray');
     const linkHoverColor = useColorModeValue('black', 'black');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-    
+  
     return (
       <Stack direction={'row'} spacing={4}>
         {NAV_ITEMS.map((navItem) => (
           <Box key={navItem.label}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
-                <Link 
+                <Link
                   p={2}
-                  href={navItem.href ?? '/Home'}
+                  href={navItem.href ?? '#'}
                   fontSize={'sm'}
                   fontWeight={500}
                   color={linkColor}
@@ -136,12 +131,12 @@ import { useNavigate } from 'react-router-dom';
   
               {navItem.children && (
                 <PopoverContent
-                border={0}
-                boxShadow={'xl'}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={'xl'}
-                minW={'sm'}>
+                  border={0}
+                  boxShadow={'xl'}
+                  bg={popoverContentBgColor}
+                  p={4}
+                  rounded={'xl'}
+                  minW={'sm'}>
                   <Stack>
                     {navItem.children.map((child) => (
                       <DesktopSubNav key={child.label} {...child} />
@@ -159,12 +154,12 @@ import { useNavigate } from 'react-router-dom';
   const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
     return (
       <Link
-      href={href}
-      role={'group'}
-      display={'block'}
-      p={2}
-      rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+        href={href}
+        role={'group'}
+        display={'block'}
+        p={2}
+        rounded={'md'}
+        _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
         <Stack direction={'row'} align={'center'}>
           <Box>
             <Text
@@ -193,11 +188,11 @@ import { useNavigate } from 'react-router-dom';
   const MobileNav = () => {
     return (
       <Stack
-      bg={useColorModeValue('white', 'black')}
-      p={4}
-      display={{ md: 'none' }}>
+        bg={useColorModeValue('white', 'black')}
+        p={4}
+        display={{ md: 'none' }}>
         {NAV_ITEMS.map((navItem) => (
-          <MobileNavItem   />
+          <MobileNavItem key={navItem.label} {...navItem} />
         ))}
       </Stack>
     );
@@ -220,7 +215,7 @@ import { useNavigate } from 'react-router-dom';
           <Text
             fontWeight={600}
             color={useColorModeValue('gray.600', 'gray.200')}>
-            {}
+            {label}
           </Text>
           {children && (
             <Icon
@@ -263,40 +258,29 @@ import { useNavigate } from 'react-router-dom';
   const NAV_ITEMS: Array<NavItem> = [
     {
       label: 'Home',
+href : '#'
+    },
+    {
+        label: 'Activity',
+        href: '#Activity',
 
-    },
-    {
-      label: 'Programs',
-      children: [
-        {
-          label: 'press to see..',
-          href: '#search1',
-        },
-      
-      ],
-    },
-  
-    {
-        label: 'Hire Designers',
-        children: [
-          {
+      },
+      {
+        label: 'About us',
+        href: '#About',
+
+      },
+  {
+   
             label: 'created by ..',
 
             subLabel:" M.A.R.N Team",
             href: '#Footer2',
           },
         
-        ],
-      },
-      {
-        label: 'Activity',
-        href: '',
-
-      },
+        
+      
+    
 
   ];
-
-  <div>
-    
-  </div>
   

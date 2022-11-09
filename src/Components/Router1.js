@@ -3,6 +3,7 @@ import {Routes,Route}from 'react-router-dom';
 import Signup from './Signup';
 import Login from './Login';
 import Welcom from './Welcom';
+import Home from './Home';
 
 
 function Router1() {
@@ -10,11 +11,13 @@ function Router1() {
     
     <Routes>
 
- <Route exact path="/welcome" element={<Welcom/>} />
+ <Route exact path="/" element={<Welcom/>} />
+
  {/* <Route path="Store" element={<Store/>} /> */}
  {/* <Route path="Get" element={<Get/>} /> */}
- <Route path="/Login1" element={<Login/>}/>
- <Route path="/Sign_up" element={<Signup/>} />
+ <Route path="/Login" element={<Login/>}/>
+ <Route path="/Home" element={<Home/>}/>
+ <Route path="/Signup" element={<Signup/>} />
 
 
  

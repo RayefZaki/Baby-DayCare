@@ -16,13 +16,16 @@ import {
   import { useNavigate } from 'react-router-dom';
   import React,{useState,useEffect} from 'react'
   import axios from "axios";
+  import NavbarH from "./NavbarH"
   
   
   export default function Login () {
+    
+
     const [Email, setEmail] = useState("")
     const [Password, setPassword] = useState("")
      const [state, setstate] = useState([])
-  useEffect(() => {
+     useEffect(() => {
 
     axios.get("https://636242497521369cd068dfd3.mockapi.io/ToDo").then((res) =>{
       console.log(res.data);
@@ -35,8 +38,13 @@ import {
     let x ;
   const checkk =()=> state.map(item=>{
     if (item.Email==Email&&item.Password==Password){
+
+      navigate("/Home")
       console.log("true");
-      alert("wellcome")
+
+      
+      
+      // alert("wellcome")
 return true
 
     }    
@@ -101,7 +109,7 @@ return true
       if(Email.length<1 || Password.length<1){
           alert("Email and Password are required");
       }else if(f !=true){
-        alert ("wrong")
+        alert ("Email or Password is wrong")
        
       
 
@@ -114,8 +122,11 @@ return true
     return (
         // <div className='login'>
       
-      
+      <div>
+        
+      <NavbarH/>
       <Flex   
+     
 
   
         minH={'100vh'}
@@ -213,6 +224,6 @@ return true
         </Box>
   
       </Flex>
-      // </div>
+       </div>
     );
   }

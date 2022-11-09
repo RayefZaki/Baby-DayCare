@@ -4,7 +4,7 @@ import {PhoneIcon} from '@chakra-ui/icons'
 const Footer = () => {
     return (
         
-        <div className='footer'>
+        <div className='footer' id='Footer2'>
             <div className='container-footer'>
             <div>
                     <p>M.A.R.N Team Students In Tuwaiq Acadimy</p>
