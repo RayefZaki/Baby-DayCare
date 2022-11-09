@@ -4,17 +4,21 @@ import Signup from './Signup';
 import Login from './Login';
 import Welcom from './Welcom';
 import Home from './Home';
+
 // import { Navbar } from 'react-bootstrap';
 import Navbar from './Navbar'
 
 function Router1() {
   return (
-  <>
- {/* <Welcom /> */}
- {/* <Navbar/>// */}
+  
+ 
+    <>
+    {/* <Navbar /> */}
     <Routes>
-           
- {/* <Route exact path="/Home" element={<Home/>} /> */}
+
+ <Route exact path="/" element={<Welcom/>} />
+
+
  {/* <Route path="Store" element={<Store/>} /> */}
  {/* <Route path="Get" element={<Get/>} /> */}
  <Route path="/Login" element={<Login/>}/>
@@ -23,6 +27,7 @@ function Router1() {
 
  <Route path="/Home" element={<Home/>}/>
  <Route path="/Signup" element={<Signup/>} />
+
 
 </Routes>
  
@@ -35,9 +40,6 @@ function Router1() {
 
  
  
-
-
-
 
   )
 }

@@ -16,7 +16,7 @@ import {
     useDisclosure,
     color,
   } from '@chakra-ui/react';
-  
+
   import {
     HamburgerIcon,
     CloseIcon,
@@ -28,7 +28,7 @@ import {
   
 
   
-  export default function WithSubnavigation() {
+  export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
     let navigate = useNavigate()
   
@@ -76,10 +76,15 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
+
               <Link to="/Login1">
               
-            <Button
-               onClick={()=>navigate("/Login")}
+            {/* <Button
+               onClick={()=>navigate("/Login")} */}
+
+             <Button
+            onClick={()=>navigate("/Welcom")}
+
                display={{ base: 'none', md: 'inline-flex' }}
                fontSize={'sm'}
                fontWeight={600}
@@ -88,9 +93,10 @@ import {
                href={'#login'}
                _hover={{
                  bg: 'pink.300',
-                }}>
-              Log In
+               }}>
+                Log Out
             </Button>
+
             </Link>
             <Button
               onClick={()=>navigate("/Signup")}
@@ -105,6 +111,9 @@ import {
               }}>
               Sign Up
             </Button>
+
+
+
           </Stack>
         </Flex>
   

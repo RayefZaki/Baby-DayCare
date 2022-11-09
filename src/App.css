@@ -60,4 +60,18 @@ margin-top: 100px;
 .vd{
   filter: brightness(0.8);
 }
+.login{
+
+  display: flex;
+/* justify-content: left; */
+  /* width: 100%; */
+  margin-left:80px;
+   
+
+  /* justify-content:right; */
+background-image: url('https://cdn.discordapp.com/attachments/1032613167446102037/1039860005542821928/Cute_Colorful_Baby_Daycare_Center_Logo_1.png');
+
+
+   
+}
 

@@ -30,19 +30,25 @@ function App() {
   Chakra Design system <ExternalLinkIcon mx='2px' />
 </Link> */}
 {/* <Contrast /> */}
-{/* <Home /> */}
+<Home />
 {/* <Navbar/> */}
 {/* <Welcom /> */}
 {/* <Singandlog2/> */}
 {/* <Search /> */}
+
 {/* <Signup/> */}
 {/* <Login/> */}
 {/* <Footer/> */}
      {/* <RegisterKids /> */}
 {/* <IslamicValues></IslamicValues> */}
 {/* <Router1 /> */}
-<Search />
 {/* <Router1/> */}
+
+
+{/* <Home></Home> */}
+{/* <Router1/> */}
+
+
     </div>
 
 
