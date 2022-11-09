@@ -21,18 +21,18 @@ import Home from './Components/Home';
 function App() {
   return (
     <div className="App">
-      <ReadDelete></ReadDelete>
+      {/* <ReadDelete></ReadDelete> */}
 
       {/* <DiaperTraining /> */}
       {/* <FinancialCulture /> */}
-{/* 
+
 <Navbar/>
-<Singandlog2/>
-<Search />
-<Signup/>
-<Login/>
-<Footer/> */}
-      
+{/* <Singandlog2/> */}
+{/* <Search /> */}
+{/* <Signup/> */}
+{/* <Login/> */}
+{/* <Footer/> */}
+      {/* <Home></Home> */}
 
       {/* <Welcom/> */}
 {/* <Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
@@ -41,7 +41,7 @@ function App() {
 {/* <Contrast /> */}
 
 {/* <Navbar/> */}
-<Welcom />
+{/* <Welcom /> */}
 {/* <Singandlog2/> */}
 {/* <Search /> */}
 {/* <Signup/> */}
@@ -49,7 +49,7 @@ function App() {
 {/* <Footer/> */}
      {/* <RegisterKids /> */}
 {/* <IslamicValues></IslamicValues> */}
-{/* <Router1/> */}
+<Router1/>
     </div>
 
 

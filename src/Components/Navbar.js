@@ -22,9 +22,11 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+import { useNavigate } from 'react-router-dom';
   
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
+    let navigate = useNavigate()
   
     return (
       <Box >
@@ -69,7 +71,8 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button
+              
+            <Button onClick={()=>navigate("/Login")}
                display={{ base: 'none', md: 'inline-flex' }}
                fontSize={'sm'}
                fontWeight={600}
@@ -78,11 +81,12 @@ import {
                href={'#login'}
                _hover={{
                  bg: 'pink.300',
-               }}>
-              Sign In
+                }}>
+              Log In
             </Button>
 
             <Button
+              onClick={()=>navigate("/Signup")}
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
@@ -108,7 +112,7 @@ import {
     const linkColor = useColorModeValue('gray', 'gray');
     const linkHoverColor = useColorModeValue('black', 'black');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-  
+    
     return (
       <Stack direction={'row'} spacing={4}>
         {NAV_ITEMS.map((navItem) => (
@@ -131,12 +135,12 @@ import {
   
               {navItem.children && (
                 <PopoverContent
-                  border={0}
-                  boxShadow={'xl'}
-                  bg={popoverContentBgColor}
-                  p={4}
-                  rounded={'xl'}
-                  minW={'sm'}>
+                border={0}
+                boxShadow={'xl'}
+                bg={popoverContentBgColor}
+                p={4}
+                rounded={'xl'}
+                minW={'sm'}>
                   <Stack>
                     {navItem.children.map((child) => (
                       <DesktopSubNav key={child.label} {...child} />
@@ -154,12 +158,12 @@ import {
   const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
     return (
       <Link
-        href={href}
-        role={'group'}
-        display={'block'}
-        p={2}
-        rounded={'md'}
-        _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      href={href}
+      role={'group'}
+      display={'block'}
+      p={2}
+      rounded={'md'}
+      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
         <Stack direction={'row'} align={'center'}>
           <Box>
             <Text
@@ -188,9 +192,9 @@ import {
   const MobileNav = () => {
     return (
       <Stack
-        bg={useColorModeValue('white', 'black')}
-        p={4}
-        display={{ md: 'none' }}>
+      bg={useColorModeValue('white', 'black')}
+      p={4}
+      display={{ md: 'none' }}>
         {NAV_ITEMS.map((navItem) => (
           <MobileNavItem key={navItem.label} {...navItem} />
         ))}
@@ -290,4 +294,8 @@ import {
       },
 
   ];
+
+  <div>
+    
+  </div>
   
