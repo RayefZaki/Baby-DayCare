@@ -11,8 +11,10 @@ import {
   createIcon,
   
 } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 export default function CallToActionWithAnnotation() {
+  let navigate = useNavigate()
   return (
     <>
       {/* <Head>
@@ -59,6 +61,7 @@ export default function CallToActionWithAnnotation() {
             alignSelf={'center'}
             position={'relative'}>
             <Button
+            onClick={()=>navigate("/Signup")}
               colorScheme={'green'}
               bg={'blue.400'}
               rounded={'full'}
@@ -69,6 +72,7 @@ export default function CallToActionWithAnnotation() {
               Singup
             </Button>
             <Button
+             onClick={()=>navigate("/Login")}
               colorScheme={'green'}
               bg={'blue.400'}
               rounded={'full'}

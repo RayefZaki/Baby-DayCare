@@ -3,13 +3,14 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 import Search from './Search'
 import './Home.css'
+import Slid from './Slid'
 export default function Home() {
   return (
     <div>
-      <Navbar />
-      <div className='anm-img'>
-   
-</div>
+
+<Navbar/>
+
+      <Slid/>
       <Search />
       <Footer />
     </div>

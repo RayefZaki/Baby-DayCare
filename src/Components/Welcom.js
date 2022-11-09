@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar'
 import Search from './Search'
 import Singandlog2 from './Singandlog2'
 import Bgimg from './video/production ID_4016504.mp4'
@@ -9,16 +8,15 @@ import Activites from './Activites'
 import { Text } from '@chakra-ui/react'
 import Whyt from './Whyt'
 import './Home.css'
+import NavbarH from './NavbarH'
 
 import AboutUs from './AboutUs';
 import { Center } from '@chakra-ui/react'
 function Welcom() {
   return (
     
-    <div className='video'>
-        <Navbar/>
-
-
+    <div className='video' id='welcome'>
+<NavbarH></NavbarH>
 <video className='vd' autoPlay loop muted>
  
     <source src={Bgimg} type = "video/mp4" />
