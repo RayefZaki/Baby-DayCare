@@ -22,9 +22,8 @@ function App() {
   return (
     <div className="App">
 
-     <Welcom/>
-
-{/* <Router1/> */}
+{/* <Home></Home> */}
+<Router1/>
     </div>
 
 
