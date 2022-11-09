@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './Components/Navbar'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Divider } from '@chakra-ui/react'
 import Footer from './Components/Footer'
 import Create from './Components/Create';
 import Search from './Components/Search';
@@ -18,37 +18,46 @@ import DiaperTraining from './Components/Descriptions/diaperTraining';
 import FinancialCulture from './Components/Descriptions/FinancialCulture'
 import ReadDelete from './Components/ReadDelete';
 import Home from './Components/Home';
+import Developer from './Components/Developer'
 function App() {
   return (
     <div className="App">
+{/* <Welcom/> */}
+<Router1/>
+{/* <IslamicValues/> */}
+{/* <Developer/> */}
 
-      {/* <DiaperTraining /> */}
-      {/* <FinancialCulture /> */}
-{/* 
-<Navbar/>
-<Singandlog2/>
-<Search />
 
-<Login/>
-<Footer/> */}
-      
+
+
+      {/* <Router1 /> */}
+    {/* <Welcom /> */}
+     
+
       {/* <Welcom/> */}
 {/* <Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
   Chakra Design system <ExternalLinkIcon mx='2px' />
 </Link> */}
 {/* <Contrast /> */}
+<Home />
 {/* <Navbar/> */}
 {/* <Welcom /> */}
 {/* <Singandlog2/> */}
 {/* <Search /> */}
+
+{/* <Signup/> */}
 {/* <Login/> */}
 {/* <Footer/> */}
      {/* <RegisterKids /> */}
 {/* <IslamicValues></IslamicValues> */}
-     {/* <Welcom/> */}
+{/* <Router1 /> */}
+{/* <Router1/> */}
 
-<Router1/>
-{/* <Home/> */}
+
+{/* <Home></Home> */}
+{/* <Router1/> */}
+
+
     </div>
 
 

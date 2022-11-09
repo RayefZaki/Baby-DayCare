@@ -16,18 +16,23 @@ import {
     useDisclosure,
     color,
   } from '@chakra-ui/react';
+
   import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-import { useNavigate } from 'react-router-dom';
+
+  import { useNavigate } from 'react-router-dom';
   
-  export default function WithSubnavigation() {
+
+  
+  export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
     let navigate = useNavigate()
   
+
     return (
       <Box >
         <Flex
@@ -71,9 +76,15 @@ import { useNavigate } from 'react-router-dom';
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
+
+              <Link to="/Login1">
               
-            <Button
-               onClick={()=>navigate("/Login")}
+            {/* <Button
+               onClick={()=>navigate("/Login")} */}
+
+             <Button
+            onClick={()=>navigate("/Welcom")}
+
                display={{ base: 'none', md: 'inline-flex' }}
                fontSize={'sm'}
                fontWeight={600}
@@ -82,10 +93,11 @@ import { useNavigate } from 'react-router-dom';
                href={'#login'}
                _hover={{
                  bg: 'pink.300',
-                }}>
-              Log In
+               }}>
+                Log Out
             </Button>
 
+            </Link>
             <Button
               onClick={()=>navigate("/Signup")}
               display={{ base: 'none', md: 'inline-flex' }}
@@ -99,6 +111,9 @@ import { useNavigate } from 'react-router-dom';
               }}>
               Sign Up
             </Button>
+
+
+
           </Stack>
         </Flex>
   

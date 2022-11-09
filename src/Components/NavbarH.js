@@ -22,13 +22,19 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+  import { useNavigate } from 'react-router-dom';
   
-  export default function WithSubnavigation() {
+  export default function NavbarH() {
     const { isOpen, onToggle } = useDisclosure();
+    let navigate = useNavigate()
+
   
     return (
-      <Box >
+      <Box className='q' >
         <Flex
+        position={'relative'}
+        top={'5'}
+        alignItems={'center'}
           bg={useColorModeValue('white', 'white')}
           color={useColorModeValue('black.600', 'black')}
           minH={'60px'}
@@ -56,7 +62,7 @@ import {
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('black', 'black')}>
-              Logo
+              <img className='logo' src='https://cdn.discordapp.com/attachments/1032613167446102037/1039859830233514024/Cute_Colorful_Baby_Daycare_Center_Logo.png'></img>
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -69,7 +75,8 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button
+                          <Button
+               onClick={()=>navigate("/Login")}
                display={{ base: 'none', md: 'inline-flex' }}
                fontSize={'sm'}
                fontWeight={600}
@@ -78,11 +85,12 @@ import {
                href={'#login'}
                _hover={{
                  bg: 'pink.300',
-               }}>
-              Sign In
+                }}>
+              Log In
             </Button>
 
             <Button
+              onClick={()=>navigate("/Signup")}
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
@@ -94,6 +102,8 @@ import {
               }}>
               Sign Up
             </Button>
+
+
           </Stack>
         </Flex>
   

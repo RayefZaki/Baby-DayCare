@@ -4,6 +4,8 @@ import Navbar from './Navbar'
 import Search from './Search'
 import './Home.css'
 import Slid from './Slid'
+import NavbarH from './NavbarH'
+import WEBHOME from './WEBHOME'
 export default function Home() {
   return (
     <div>
@@ -12,6 +14,7 @@ export default function Home() {
 
       <Slid/>
       <Search />
+      <WEBHOME/>
       <Footer />
     </div>
   )

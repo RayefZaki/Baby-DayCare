@@ -16,7 +16,8 @@ import {
   import { useNavigate } from 'react-router-dom';
   import React,{useState,useEffect} from 'react'
   import axios from "axios";
-  import NavbarH from "./NavbarH"
+  import Navbarlogin from './Navbarlogin'
+
   
   
   export default function Login () {
@@ -73,11 +74,19 @@ import {
     }
     
     return (
+
    
       
-      <div>
+      
         
-      <NavbarH/>
+      
+
+        <div id='login'> 
+           <Navbarlogin/>
+
+
+
+
       <Flex   
      
 

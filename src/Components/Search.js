@@ -12,14 +12,20 @@ import {
   Badge,
   Flex,
 } from '@chakra-ui/react';
+
+import "./Search.css";
+
+
 import "./Search.css"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import axios, { Axios } from "axios";
 export default function Search(){
            
             
             const [arr, setArr] = useState([]);
             const [search, setSearch] = useState('');
+            const navigate = useNavigate()
             
             useEffect(() => {
                axios.get(`https://6362424b7521369cd068e00e.mockapi.io/DayCare`).then((res)=>{
@@ -53,13 +59,14 @@ export default function Search(){
 
              </Center>
         
-        <div className="card">
         
-          
+        
+             <div className="card-saerch">
+              <div className="parent">
         {arr.filter((ele) => ele.course.toLowerCase().includes(search) ||
            ele.course.toUpperCase().includes(search)).map((ele) => (
            
-
+            
             <div className="h"> 
             <Center py={6} >
             <Stack 
@@ -76,7 +83,7 @@ export default function Search(){
                   objectFit="cover"
                   boxSize="100%"
                   src={
-                    "https://cdn.discordapp.com/attachments/1032613167446102037/1038783659949432892/Babay_daycare.jpg"
+                    "https://cdn.discordapp.com/attachments/1032613167446102037/1039860005542821928/Cute_Colorful_Baby_Daycare_Center_Logo_1.png"
                   }
                 />
               </Flex >
@@ -117,6 +124,7 @@ export default function Search(){
                   </Button>
                   
                   <Button 
+                    onClick={()=>navigate("/Signup")}
                     flex={1}
                     fontSize={'sm'}
                     rounded={'full'}
@@ -143,13 +151,13 @@ export default function Search(){
               )
               
               )}
-          
+          </div>
         </div>
         </div>
        
 
 
 
-        </div>
+         </div>
       )
 }
