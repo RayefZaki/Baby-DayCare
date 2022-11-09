@@ -23,12 +23,12 @@ function App() {
   return (
     <div className="App">
 
-      <Router1 />
+      {/* <Router1 /> */}
 {/* <IslamicValues /> */}
 {/* {/* <Router1/> */}
 {/* <IslamicValues/> */}
 {/* <Developer/> */}
-
+<Welcom/>
 
 
     </div>
