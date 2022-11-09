@@ -24,11 +24,8 @@ function App() {
     <div className="App">
 {/* <Welcom/> */}
 <Router1/>
-
-<Signup/>
 {/* <IslamicValues/> */}
 {/* <Developer/> */}
-<Login/>
 
 
 

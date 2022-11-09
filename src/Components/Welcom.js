@@ -9,6 +9,7 @@ import { Text } from '@chakra-ui/react'
 import Whyt from './Whyt'
 import './Home.css'
 import NavbarH from './NavbarH'
+import Navbar from './Navbar'
 
 import AboutUs from './AboutUs';
 import { Center } from '@chakra-ui/react'

@@ -13,13 +13,14 @@ import {
   Flex,
 } from '@chakra-ui/react';
 import "./Search.css"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios, { Axios } from "axios";
 export default function Search(){
            
             
             const [arr, setArr] = useState([]);
             const [search, setSearch] = useState('');
+            const navigate = useNavigate()
             
             useEffect(() => {
                axios.get(`https://6362424b7521369cd068e00e.mockapi.io/DayCare`).then((res)=>{
@@ -117,6 +118,7 @@ export default function Search(){
                   </Button>
                   
                   <Button 
+                    onClick={()=>navigate("/Signup")}
                     flex={1}
                     fontSize={'sm'}
                     rounded={'full'}
