@@ -31,6 +31,7 @@ function App() {
 <Login/>
 <Footer/> */}
       
+
       {/* <Welcom/> */}
 {/* <Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
   Chakra Design system <ExternalLinkIcon mx='2px' />
@@ -46,11 +47,16 @@ function App() {
 {/* <Footer/> */}
      {/* <RegisterKids /> */}
 {/* <IslamicValues></IslamicValues> */}
+{/* <Router1/> */}
     </div>
 
 
       
       // <Welcom/>
+
+   
+      // <Welcom/>
+
  
 
   );

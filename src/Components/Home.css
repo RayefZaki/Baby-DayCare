@@ -8,7 +8,10 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
-  
+  .out-activity{
+    font-size: 25px;
+    text-shadow: 0px 2px 3px gray;
+  }
   @keyframes img {
     0%{
        background-size: cover;
