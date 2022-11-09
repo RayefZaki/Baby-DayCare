@@ -1,10 +1,14 @@
-.card{
+.card-search{
     display: flex;
     justify-content: space-around;
-    margin: 5px;
+    margin-top: 10px;
     flex-wrap: wrap;
     flex-direction: row;
-    
+    /* width: 20%; */
+
+  }
+  .d-block{
+    height: 550px;
   }
 .one{
   padding: 10px;
@@ -44,6 +48,7 @@
   z-index: 22;
   box-shadow: 0px 0px 5px 1px gray;
   border-radius: 4%;
+  
 }
 
 .input:focus ~.two{
@@ -95,4 +100,14 @@ animation-fill-mode:forwards;
   
    
 
-   
+   .opa{
+    background-color: black;
+    opacity: 0.6;
+
+    width: 400px;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+   }
+
+  

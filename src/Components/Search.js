@@ -12,8 +12,13 @@ import {
   Badge,
   Flex,
 } from '@chakra-ui/react';
+
+import "./Search.css";
+
+
 import "./Search.css"
 import { Link, useNavigate } from "react-router-dom";
+
 import axios, { Axios } from "axios";
 export default function Search(){
            
@@ -54,13 +59,14 @@ export default function Search(){
 
              </Center>
         
-        <div className="card">
         
-          
+        
+             <div className="card-saerch">
+              <div className="parent">
         {arr.filter((ele) => ele.course.toLowerCase().includes(search) ||
            ele.course.toUpperCase().includes(search)).map((ele) => (
            
-
+            
             <div className="h"> 
             <Center py={6} >
             <Stack 
@@ -145,13 +151,13 @@ export default function Search(){
               )
               
               )}
-          
+          </div>
         </div>
         </div>
        
 
 
 
-        </div>
+         </div>
       )
 }
