@@ -21,7 +21,7 @@ import Home from './Components/Home';
 function App() {
   return (
     <div className="App">
-      {/* <Router1 /> */}
+      <Router1 />
     {/* <Welcom /> */}
      
 
@@ -30,7 +30,7 @@ function App() {
   Chakra Design system <ExternalLinkIcon mx='2px' />
 </Link> */}
 {/* <Contrast /> */}
-<Home />
+{/* <Home /> */}
 {/* <Navbar/> */}
 {/* <Welcom /> */}
 {/* <Singandlog2/> */}
@@ -43,7 +43,7 @@ function App() {
 {/* <IslamicValues></IslamicValues> */}
 {/* <Router1 /> */}
 {/* <Router1/> */}
-
+  
 
 {/* <Home></Home> */}
 {/* <Router1/> */}
