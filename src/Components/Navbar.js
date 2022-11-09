@@ -25,7 +25,7 @@ import {
   } from '@chakra-ui/icons';
 
   import { useNavigate } from 'react-router-dom';
-  
+  import './Navbar.css'
 
   
   export default function Navbar() {
@@ -34,6 +34,7 @@ import {
   
 
     return (
+      <div className='navbar2'>
       <Box >
         <Flex
           bg={useColorModeValue('white', 'white')}
@@ -81,9 +82,9 @@ import {
               
             {/* <Button
                onClick={()=>navigate("/Login")} */}
-
+          
              <Button
-            onClick={()=>navigate("/Welcom")}
+            onClick={()=>navigate("/")}
 
                display={{ base: 'none', md: 'inline-flex' }}
                fontSize={'sm'}
@@ -96,7 +97,7 @@ import {
                }}>
                 Log Out
             </Button>
-
+            
             </Link>
             <Button
               onClick={()=>navigate("/Signup")}
@@ -121,6 +122,7 @@ import {
           <MobileNav />
         </Collapse>
       </Box>
+      </div>
     );
   }
   
@@ -265,6 +267,7 @@ import {
           </Stack>
         </Collapse>
       </Stack>
+      
     );
   };
   
@@ -311,7 +314,4 @@ import {
 
   ];
 
-  <div>
-    
-  </div>
   
