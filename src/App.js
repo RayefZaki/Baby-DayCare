@@ -23,8 +23,8 @@ function App() {
   return (
     <div className="App">
 
-      {/* <Router1 /> */}
-<IslamicValues />
+      <Router1 />
+{/* <IslamicValues /> */}
 {/* <Welcom/> */}
 {/* <Router1/> */}
 {/* <IslamicValues/> */}
