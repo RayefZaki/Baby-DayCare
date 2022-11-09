@@ -28,7 +28,7 @@ export default function Search(){
             const navigate = useNavigate()
             
             useEffect(() => {
-               axios.get(`https://6362424b7521369cd068e00e.mockapi.io/DayCare`).then((res)=>{
+               axios.get(`https://6362424c7521369cd068e027.mockapi.io/ToDO`).then((res)=>{
                 console.log(res.data)
                 setArr(res.data)
 
