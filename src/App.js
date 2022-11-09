@@ -21,8 +21,8 @@ import Home from './Components/Home';
 function App() {
   return (
     <div className="App">
-      <Router1 />
-    
+      {/* <Router1 /> */}
+    {/* <Welcom /> */}
      
 
       {/* <Welcom/> */}
@@ -41,7 +41,7 @@ function App() {
      {/* <RegisterKids /> */}
 {/* <IslamicValues></IslamicValues> */}
 {/* <Router1 /> */}
-
+<Search />
 {/* <Router1/> */}
     </div>
 
