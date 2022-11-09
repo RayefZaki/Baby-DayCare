@@ -34,7 +34,7 @@ import {
   
   export default function BasicStatistics() {
     return (
-      <Box maxW="7xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
+      <Box maxW="7xl"  marginBottom={'100'}  mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
         <chakra.h1
           textAlign={'center'}
           fontSize={'4xl'}
@@ -43,7 +43,7 @@ import {
           color= "blue.400">
           What is our DayCare doing?
         </chakra.h1>
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
+        <SimpleGrid  display={'flex'} justifyContent = {'space-around'} columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
           <StatsCard title={' support and increase the stability of working families '} stat={'Solve problems,'} />
           <StatsCard title={'  All age groups '} stat={'Contain all children'} />
           <StatsCard title={'educational and developmental activities'} stat={'More than just fun'} />
