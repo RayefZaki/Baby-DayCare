@@ -22,50 +22,10 @@ import Developer from './Components/Developer'
 function App() {
   return (
     <div className="App">
-{/* <Welcom/> */}
+
 <Router1/>
-{/* <IslamicValues/> */}
-{/* <Developer/> */}
-
-
-
-
-      {/* <Router1 /> */}
-    {/* <Welcom /> */}
-     
-
-      {/* <Welcom/> */}
-{/* <Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
-  Chakra Design system <ExternalLinkIcon mx='2px' />
-</Link> */}
-{/* <Contrast /> */}
-<Home />
-{/* <Navbar/> */}
-{/* <Welcom /> */}
-{/* <Singandlog2/> */}
-{/* <Search /> */}
-
-{/* <Signup/> */}
-{/* <Login/> */}
-{/* <Footer/> */}
-     {/* <RegisterKids /> */}
-{/* <IslamicValues></IslamicValues> */}
-{/* <Router1 /> */}
-{/* <Router1/> */}
-
-
-{/* <Home></Home> */}
-{/* <Router1/> */}
-
 
     </div>
-
-
-      
-
-   
-
- 
 
   );
 }
