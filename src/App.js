@@ -12,14 +12,17 @@ import { ExternalLinkIcon } from '@chakra-ui/icons'
 import Welcom from './Components/Welcom';
 import RegisterKids from './Components/RegisterKids';
 import IslamicValues from './Components/Descriptions/IslamicValues';
+import Router1 from './Components/Router1';
 import Contrast from './Components/Descriptions/Contrast';
 import DiaperTraining from './Components/Descriptions/diaperTraining';
 import FinancialCulture from './Components/Descriptions/FinancialCulture'
 import ReadDelete from './Components/ReadDelete';
+import Home from './Components/Home';
 function App() {
   return (
     <div className="App">
       <ReadDelete></ReadDelete>
+
       {/* <DiaperTraining /> */}
       {/* <FinancialCulture /> */}
 {/* 
@@ -28,15 +31,17 @@ function App() {
 <Search />
 <Signup/>
 <Login/>
-<Footer/>
-      */}
+<Footer/> */}
+      
+
       {/* <Welcom/> */}
 {/* <Link to="Login" spy={true} smooth={true} offset={50} duration={500} >
   Chakra Design system <ExternalLinkIcon mx='2px' />
 </Link> */}
 {/* <Contrast /> */}
-<Create></Create>
+
 {/* <Navbar/> */}
+<Welcom />
 {/* <Singandlog2/> */}
 {/* <Search /> */}
 {/* <Signup/> */}
@@ -44,7 +49,17 @@ function App() {
 {/* <Footer/> */}
      {/* <RegisterKids /> */}
 {/* <IslamicValues></IslamicValues> */}
+{/* <Router1/> */}
     </div>
+
+
+      
+      // <Welcom/>
+
+   
+      // <Welcom/>
+
+ 
 
   );
 }

@@ -1,55 +1,293 @@
-import React, { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
-// import logo from './images/logo.png'
-
-import './Navbar.css'
-
-const Navbar = () => {
-
-    const [click, setClick] = useState(false)
-    const handleClick = () => setClick(!click)
-
-    const closeMenu = () => setClick(false)
-const [navbar,setNavbar]=useState (false);
-
-
-const changebk = ()=>{
-if(window.scrollY>=80) {setNavbar(true)
-}else{
-    setNavbar(false)
-}
-
-}         
-
-window.addEventListener('scroll',changebk);
+import {
+    Box,
+    Flex,
+    Text,
+    IconButton,
+    Button,
+    Stack,
+    Collapse,
+    Icon,
+    Link,
+    Popover,
+    PopoverTrigger,
+    PopoverContent,
+    useColorModeValue,
+    useBreakpointValue,
+    useDisclosure,
+    color,
+  } from '@chakra-ui/react';
+  import {
+    HamburgerIcon,
+    CloseIcon,
+    ChevronDownIcon,
+    ChevronRightIcon,
+  } from '@chakra-ui/icons';
+  
+  export default function WithSubnavigation() {
+    const { isOpen, onToggle } = useDisclosure();
+  
     return (
-        <div className='header'>
-            <nav className={navbar? 'navbar active':'navbar'}>
-                {/* <a href='/' className='logo'> */}
-                    {/* <img  width={10} src='https://cdn.discordapp.com/attachments/1032613167446102037/1039311430899466260/unknown.png'alt='logo' /> */}
-                {/* </a> */}
-                <div className='hamburger' onClick={handleClick}>
-                    {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
-                        : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
+      <Box >
+        <Flex
+          bg={useColorModeValue('white', 'white')}
+          color={useColorModeValue('black.600', 'black')}
+          minH={'60px'}
+          py={{ base: 2 }}
+          px={{ base: 4 }}
+          borderBottom={1}
+          borderStyle={'solid'}
+          borderColor={useColorModeValue('black', 'black')}
+          align={'center'}>
+          <Flex
+            flex={{ base: 1, md: 'auto' }}
+            ml={{ base: -2 }}
+            display={{ base: 'flex', md: 'none' }}>
+            <IconButton
+              onClick={onToggle}
+              icon={
+                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+              }
+              variant={'ghost'}
+              aria-label={'Toggle Navigation'}
+            />
+          </Flex>
+          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+            <Text
+              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+              fontFamily={'heading'}
+              color={useColorModeValue('black', 'black')}>
+              Logo
+            </Text>
+  
+            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+              <DesktopNav />
+            </Flex>
+          </Flex>
+  
+          <Stack
+            flex={{ base: 1, md: 0 }}
+            justify={'flex-end'}
+            direction={'row'}
+            spacing={6}>
+            <Button
+               display={{ base: 'none', md: 'inline-flex' }}
+               fontSize={'sm'}
+               fontWeight={600}
+               color={'white'}
+               bg={'blue.400'}
+               href={'#login'}
+               _hover={{
+                 bg: 'pink.300',
+               }}>
+              Sign In
+            </Button>
 
-                </div>
-                <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className='nav-item'>
-                        <a href='/' onClick={closeMenu}>Home</a>
-                    </li>
-                    <li className='nav-item'>
-                        <a spy={true} smooth={true} offset={50} duration={500} githref='#footer' onClick={closeMenu}>About</a>
-                    </li>
-                    <li className='nav-item'>
-                        <a href='#search1' onClick={closeMenu}>Programs</a>
-                    </li>
-                    <li className='nav-item'>
-                        <a href='#demo' onClick={closeMenu}>our servise</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    )
-}
+            <Button
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'sm'}
+              fontWeight={600}
+              color={'white'}
+              bg={'blue.400'}
+              href={'#'}
+              _hover={{
+                bg: 'pink.300',
+              }}>
+              Sign Up
+            </Button>
+          </Stack>
+        </Flex>
+  
+        <Collapse in={isOpen} animateOpacity>
+          <MobileNav />
+        </Collapse>
+      </Box>
+    );
+  }
+  
+  const DesktopNav = () => {
+    const linkColor = useColorModeValue('gray', 'gray');
+    const linkHoverColor = useColorModeValue('black', 'black');
+    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+  
+    return (
+      <Stack direction={'row'} spacing={4}>
+        {NAV_ITEMS.map((navItem) => (
+          <Box key={navItem.label}>
+            <Popover trigger={'hover'} placement={'bottom-start'}>
+              <PopoverTrigger>
+                <Link
+                  p={2}
+                  href={navItem.href ?? '#'}
+                  fontSize={'sm'}
+                  fontWeight={500}
+                  color={linkColor}
+                  _hover={{
+                    textDecoration: 'none',
+                    color: linkHoverColor,
+                  }}>
+                  {navItem.label}
+                </Link>
+              </PopoverTrigger>
+  
+              {navItem.children && (
+                <PopoverContent
+                  border={0}
+                  boxShadow={'xl'}
+                  bg={popoverContentBgColor}
+                  p={4}
+                  rounded={'xl'}
+                  minW={'sm'}>
+                  <Stack>
+                    {navItem.children.map((child) => (
+                      <DesktopSubNav key={child.label} {...child} />
+                    ))}
+                  </Stack>
+                </PopoverContent>
+              )}
+            </Popover>
+          </Box>
+        ))}
+      </Stack>
+    );
+  };
+  
+  const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+    return (
+      <Link
+        href={href}
+        role={'group'}
+        display={'block'}
+        p={2}
+        rounded={'md'}
+        _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+        <Stack direction={'row'} align={'center'}>
+          <Box>
+            <Text
+              transition={'all .3s ease'}
+              _groupHover={{ color: 'pink.400' }}
+              fontWeight={500}>
+              {label}
+            </Text>
+            <Text fontSize={'sm'}>{subLabel}</Text>
+          </Box>
+          <Flex
+            transition={'all .3s ease'}
+            transform={'translateX(-10px)'}
+            opacity={0}
+            _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+            justify={'flex-end'}
+            align={'center'}
+            flex={1}>
+            <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+          </Flex>
+        </Stack>
+      </Link>
+    );
+  };
+  
+  const MobileNav = () => {
+    return (
+      <Stack
+        bg={useColorModeValue('white', 'black')}
+        p={4}
+        display={{ md: 'none' }}>
+        {NAV_ITEMS.map((navItem) => (
+          <MobileNavItem key={navItem.label} {...navItem} />
+        ))}
+      </Stack>
+    );
+  };
+  
+  const MobileNavItem = ({ label, children, href }: NavItem) => {
+    const { isOpen, onToggle } = useDisclosure();
+  
+    return (
+      <Stack spacing={4} onClick={children && onToggle}>
+        <Flex
+          py={2}
+          as={Link}
+          href={href ?? '#'}
+          justify={'space-between'}
+          align={'center'}
+          _hover={{
+            textDecoration: 'none',
+          }}>
+          <Text
+            fontWeight={600}
+            color={useColorModeValue('gray.600', 'gray.200')}>
+            {label}
+          </Text>
+          {children && (
+            <Icon
+              as={ChevronDownIcon}
+              transition={'all .25s ease-in-out'}
+              transform={isOpen ? 'rotate(180deg)' : ''}
+              w={6}
+              h={6}
+            />
+          )}
+        </Flex>
+  
+        <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
+          <Stack
+            mt={2}
+            pl={4}
+            borderLeft={1}
+            borderStyle={'solid'}
+            borderColor={useColorModeValue('gray.200', 'gray.700')}
+            align={'start'}>
+            {children &&
+              children.map((child) => (
+                <Link key={child.label} py={2} href={child.href}>
+                  {child.label}
+                </Link>
+              ))}
+          </Stack>
+        </Collapse>
+      </Stack>
+    );
+  };
+  
+  interface NavItem {
+    label: string;
+    subLabel?: string;
+    children?: Array<NavItem>;
+    href?: string;
+  }
+  
+  const NAV_ITEMS: Array<NavItem> = [
+    {
+      label: 'Home',
 
-export default Navbar
+    },
+    {
+      label: 'Programs',
+      children: [
+        {
+          label: 'press to see..',
+          href: '#search1',
+        },
+      
+      ],
+    },
+  
+    {
+        label: 'Hire Designers',
+        children: [
+          {
+            label: 'created by ..',
+
+            subLabel:" M.A.R.N Team",
+            href: '#footer',
+          },
+        
+        ],
+      },
+      {
+        label: 'Activity',
+        href: '#Activity',
+
+      },
+
+  ];
+  

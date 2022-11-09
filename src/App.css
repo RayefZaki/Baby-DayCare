@@ -26,17 +26,23 @@ background-color: aquamarine;
   height: 100%;
 
 }
+.Activity1{
+margin-top: 100px;
+
+  display: flex;
+  justify-content: space-around;
+}
 
 .welcome{
   position: absolute;
-  top: 190px;
+  top: 200px;
   left: 50%;
   right: 50%;
   width: 200px;
   z-index: 2343;
   width: 300px;
   color: white;
-  font-size: xxx-large;
+  font-size: xx-large;
 }
 .vd{
   filter: brightness(0.8);

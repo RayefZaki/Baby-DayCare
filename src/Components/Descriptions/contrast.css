@@ -42,3 +42,9 @@
   .finan{
     background-color: beige;
   }
+
+  .container-footer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
