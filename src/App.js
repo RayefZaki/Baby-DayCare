@@ -23,8 +23,12 @@ function App() {
   return (
     <div className="App">
 
+      <Router1 />
+{/* <IslamicValues /> */}
+{/* {/* <Router1/> */}
+{/* <IslamicValues/> */}
+{/* <Developer/> */}
 
-<Router1/>
 
 
     </div>

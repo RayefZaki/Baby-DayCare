@@ -84,8 +84,7 @@ import {
               _hover={{
                 bg: 'pink.300',
               }}>
-Back to Welcom           
- </Button>
+Back to Welcom            </Button>
           </Stack>
         </Flex>
   

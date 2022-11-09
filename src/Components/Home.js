@@ -13,8 +13,9 @@ export default function Home() {
 <Navbar/>
 
       <Slid/>
-      <Search />
       <WEBHOME/>
+
+      <Search />
       <Footer />
     </div>
   )
