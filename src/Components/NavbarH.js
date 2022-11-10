@@ -30,7 +30,7 @@ import {
 
   
     return (
-      <Box className='q' >
+      <Box marginBottom={"3"} >
         <Flex
         position={'relative'}
         top={'5'}

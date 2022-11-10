@@ -38,10 +38,11 @@ export default function Search(){
            
       return(
 
-        <div id="search1">
+        // <div id="search1">
 
         <div className="search">
             {}
+            <div>
             <Center>
              
             <input className="input" color={"white"}
@@ -51,24 +52,75 @@ export default function Search(){
              </input>
              <div className="one"></div>
              <div className="two"></div>
-             {/* </Input><br></br> */}
-
-
-
-
 
              </Center>
+             </div>
         
         
-        
-             <div className="card-saerch">
-              <div className="parent">
+             <div className="cardss">
+              
         {arr.filter((ele) => ele.course.toLowerCase().includes(search) ||
            ele.course.toUpperCase().includes(search)).map((ele) => (
            
             
             <div className="h"> 
-            <Center py={6} >
+
+            <div className="gif">
+            <h1>{ele.course}</h1>
+            <Text noOfLines={"2"}>{ele.shortDesc}</Text>
+            <div className="btns">
+            <Button
+           color={"blue.400"}
+           flex={1}
+           fontSize={'sm'}
+           rounded={'full'}
+           _focus={{
+             bg: 'gray.200',
+           }}>
+          <Link to = '/Desc' > Discrption</Link>
+         </Button>
+         
+         <Button 
+           onClick={()=>navigate("/Register")}
+           flex={1}
+           fontSize={'sm'}
+           rounded={'full'} 
+           bg={'blue.400'}
+           color={'white'}
+           boxShadow={
+             '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+           }
+           _hover={{
+             bg: 'blue.500',
+           }}
+           _focus={{
+             bg: 'blue.500',
+           }}>
+           Join
+         </Button>
+         </div>
+            </div>
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {/* <Center py={6} >
             <Stack 
               borderWidth="1px"
               borderRadius="lg"
@@ -146,19 +198,19 @@ export default function Search(){
                 </Stack>
               </Stack>
             </Stack>
-          </Center>
+          </Center> */}
           </div>
           
               )
               
               )}
           </div>
-        </div>
-        </div>
+         </div>
+        
        
 
 
 
-         </div>
+         
       )
 }
