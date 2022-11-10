@@ -4,8 +4,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import "./Search.css"
 export default function App() {
 return (
-	<div className='slid' style={{  width: 1348, height:500,padding: 1 ,marginBottom:150}}>
-	<Carousel>
+	<div className='slid' style={{  width: "100%", height:500,padding: 1 ,marginBottom:150}}>
+	<Carousel >
 		<Carousel.Item interval={1500}>
 		<img height={"100"}
 			className="d-block w-100"
@@ -19,7 +19,7 @@ src="https://cdn.discordapp.com/attachments/1032613167446102037/1039820608990613
 			</div>
 		</Carousel.Caption>
 		</Carousel.Item>
-		<Carousel.Item interval={1500}>
+		<Carousel.Item interval={1500} >
 		<img
 			className="d-block w-100"
 src="https://cdn.discordapp.com/attachments/1032613167446102037/1039820545484656670/pexels-cdc-3992949.jpg"
