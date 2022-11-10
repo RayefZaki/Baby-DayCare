@@ -37,7 +37,7 @@ background-color: aquamarine;
 }
 .Activity1{
 margin-top: 100px;
-
+flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
 }
@@ -47,7 +47,10 @@ margin-top: 100px;
   margin: 0;
   align-items: center;
   flex-wrap: wrap;
+<<<<<<< HEAD
+=======
   /* width: 100%; */
+>>>>>>> 0667d938516fb5506ee894ba3dfb848f7bd6deae
 }
 #About .nnn{
   height: 570px;
@@ -94,6 +97,6 @@ background-image: url('https://cdn.discordapp.com/attachments/103261316744610203
 }
 .changeColorDay{
   display: flex;
-  
+
 }
 
