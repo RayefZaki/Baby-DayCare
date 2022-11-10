@@ -121,7 +121,7 @@ export default function Simple() {
               transform: 'translateY(2px)',
               boxShadow: 'lg',
             }}>
-                <Link to='/regKid'>ADD Course</Link>                
+                <Link to='/Register'>ADD Course</Link>                
                 
                  </Button>
                  <Link to="/Home">
