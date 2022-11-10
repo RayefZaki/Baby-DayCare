@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter} from 'react-router-dom';
-
+import { useMediaQuery } from '@chakra-ui/react'
 
 // import $ from 'jquery';
 // import Popper from 'popper.js';
