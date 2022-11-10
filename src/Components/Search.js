@@ -75,7 +75,7 @@ export default function Search(){
               w={{ sm: '100%', md: '540px' }}
               height={{ sm: '476px', md: '20rem' }}
               direction={{ base: 'column', md: 'row' }}
-              bg={('white', 'gray.900')}
+              bg={('white', '#bee9e8')}
               boxShadow={'2xl'}
               padding={4}>
               <Flex flex={1} bg="blue.200">
@@ -83,8 +83,7 @@ export default function Search(){
                   objectFit="cover"
                   boxSize="100%"
                   src={
-                    "https://cdn.discordapp.com/attachments/1032613167446102037/1040008091682488392/pexels-yan-krukov-8613319.jpg"
-                  }
+'https://cdn.discordapp.com/attachments/1032613167446102037/1039860005542821928/Cute_Colorful_Baby_Daycare_Center_Logo_1.png'                  }
                 />
               </Flex >
               <Stack 
@@ -100,7 +99,7 @@ export default function Search(){
                 
                 <Text 
                   textAlign={'center'} noOfLines={"5"}
-                  color={('gray.700', 'gray.400')}
+                  color={('gray.800', 'gray.800')}
                   px={3}>
                   {ele.shortDesc}
                 </Text>
@@ -119,7 +118,7 @@ export default function Search(){
                     fontSize={'sm'}
                     rounded={'full'}
                     _focus={{
-                      bg: 'gray.200',
+                      bg: 'pink.300',
                     }}>
                    <Link to = '/Desc' > Discrption</Link>
                   </Button>
@@ -129,7 +128,7 @@ export default function Search(){
                     flex={1}
                     fontSize={'sm'}
                     rounded={'full'} 
-                    bg={'blue.400'}
+                    bg={'pink.400'}
                     color={'white'}
                     boxShadow={
                       '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
@@ -138,7 +137,7 @@ export default function Search(){
                       bg: 'blue.500',
                     }}
                     _focus={{
-                      bg: 'blue.500',
+                      bg: 'pink.500',
                     }}>
                     Join
                   </Button>

@@ -13,13 +13,13 @@ export default function Home() {
     <div>
 
 <Navbar/>
-<div className='anm-img'>
+{/* <div className='anm-img'>
 <div className='opa'>
 			<Center><h1>outdoor activities</h1></Center>
 			<Center><p>Many outdoor activities and sports practices</p></Center>
 			</div>
-</div>
-      {/* <Slid/> */}
+</div> */}
+      <Slid/>
       <WEBHOME/>
 
       <Search />
