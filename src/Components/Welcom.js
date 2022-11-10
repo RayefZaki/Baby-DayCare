@@ -42,7 +42,7 @@ function Welcom() {
 
 
 
-  {/* <h1 style={{color: ''}}>🅳🅰🆈🅲🅰🆁🅴</h1> */}
+  <h1 style={{color: ''}}>🅳🅰🆈🅲🅰🆁🅴</h1>
   </div>
  <p> ...𝑓𝑜𝑟 𝑦𝑜𝑢𝑟 𝑐ℎ𝑖𝑙𝑑𝑟𝑒𝑛 𝑐𝑎𝑟𝑒
 
