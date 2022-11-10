@@ -4,6 +4,7 @@ import Signup from './Signup';
 import Login from './Login';
 import Welcom from './Welcom';
 import Home from './Home';
+import Register from './Register'
 
 // import { Navbar } from 'react-bootstrap';
 import Navbar from './Navbar'
@@ -27,6 +28,8 @@ function Router1() {
 
  <Route path="/Home" element={<Home/>}/>
  <Route path="/Signup" element={<Signup/>} />
+ <Route path="/Register" element={<Register/>} />
+
 
 
 </Routes>

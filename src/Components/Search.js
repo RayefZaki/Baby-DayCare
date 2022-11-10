@@ -124,7 +124,7 @@ export default function Search(){
                   </Button>
                   
                   <Button 
-                    onClick={()=>navigate("/Signup")}
+                    onClick={()=>navigate("/Register")}
                     flex={1}
                     fontSize={'sm'}
                     rounded={'full'}
