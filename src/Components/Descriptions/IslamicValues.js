@@ -18,6 +18,7 @@ import {
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 export default function Simple() {
   return (
@@ -120,7 +121,10 @@ export default function Simple() {
               transform: 'translateY(2px)',
               boxShadow: 'lg',
             }}>
-ADD Course              </Button>
+                <Link to='/regKid'>ADD Course</Link>                
+                
+                 </Button>
+                 <Link to="/Home">
           <Button
             rounded={'none'}
             w={'full'}
@@ -134,8 +138,9 @@ ADD Course              </Button>
               transform: 'translateY(2px)',
               boxShadow: 'lg',
             }}>
-     Back   </Button>
-
+                 Back     
+                    </Button>
+                    </Link> 
           <Stack direction="row" alignItems="center" justifyContent={'center'}>
             <Text>M.A.R.N Team Students In Tuwaiq Acadimy</Text>
           </Stack>

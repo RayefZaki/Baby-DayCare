@@ -46,6 +46,7 @@ margin-top: 100px;
   justify-content: space-around;
   margin: 0;
   align-items: center;
+  flex-wrap: wrap;
   /* width: 100%; */
 }
 #About .nnn{
@@ -71,6 +72,7 @@ margin-top: 100px;
 .logo{
   width: 90px;
   transform: translate(0px,-8px);
+  height: 50px;
 }
 /* .q{
   display: flex;

@@ -22,9 +22,11 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+import { useNavigate } from 'react-router-dom';
   
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
+    const navigate = useNavigate()
   
     return (
       <Box className='q' >
@@ -73,8 +75,9 @@ import {
             direction={'row'}
             spacing={6}>
            
-
+              
             <Button
+            onClick={()=>navigate("/")}
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
@@ -84,7 +87,11 @@ import {
               _hover={{
                 bg: 'pink.300',
               }}>
-Back to Welcom            </Button>
+
+Back to Welcome        
+ </Button>
+ 
+
           </Stack>
         </Flex>
   

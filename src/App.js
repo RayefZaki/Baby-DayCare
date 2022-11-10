@@ -31,6 +31,16 @@ function App() {
 {/* <Developer/> */}
 <Welcom/>
 
+      {/* <Router1 /> */}
+{/* <IslamicValues /> */}
+{/* <Welcom/> */}
+{/* <Router1/> */}
+{/* <IslamicValues/> */}
+{/* <Developer/> */}
+
+
+
+
 
     </div>
 

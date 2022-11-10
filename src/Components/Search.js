@@ -114,20 +114,21 @@ export default function Search(){
                   justifyContent={'space-between'}
                   alignItems={'center'}>
                   <Button
+           
                     flex={1}
                     fontSize={'sm'}
                     rounded={'full'}
                     _focus={{
                       bg: 'gray.200',
                     }}>
-                    Discrption
+                   <Link to = '/Desc' > Discrption</Link>
                   </Button>
                   
                   <Button 
                     onClick={()=>navigate("/Signup")}
                     flex={1}
                     fontSize={'sm'}
-                    rounded={'full'}
+                    rounded={'full'} 
                     bg={'blue.400'}
                     color={'white'}
                     boxShadow={
