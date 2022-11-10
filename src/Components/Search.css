@@ -99,11 +99,17 @@ animation-fill-mode:forwards;
   }
   
    
-
+  .opa h1{
+    text-align: center;
+    
+  }
    .opa{
+    transform: translateY(130px);
+    text-align: center;
+    margin: auto;
     background-color: black;
     opacity: 0.6;
-
+    text-align: center;
     width: 400px;
     color: white;
     font-weight: bold;

@@ -6,8 +6,10 @@ import Welcom from './Welcom';
 import Home from './Home';
 import Register from './Register'
 
+import Islamic from './Descriptions/IslamicValues'
 // import { Navbar } from 'react-bootstrap';
 import Navbar from './Navbar'
+import RegisterKids from './RegisterKids';
 
 function Router1() {
   return (
@@ -23,7 +25,8 @@ function Router1() {
  {/* <Route path="Store" element={<Store/>} /> */}
  {/* <Route path="Get" element={<Get/>} /> */}
  <Route path="/Login" element={<Login/>}/>
-
+ <Route path ='/Desc' element= {<Islamic/>} />
+ <Route path='/regKid' element={<RegisterKids />} />
  <Route path="/Sign_up" element={<Signup/>} />
 
  <Route path="/Home" element={<Home/>}/>

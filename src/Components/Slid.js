@@ -39,10 +39,7 @@ src="https://cdn.discordapp.com/attachments/1032613167446102037/1039820507844968
 			alt="Image One"
 		/>
 		<Carousel.Caption>
-		<div className='opa'>
-			<h1>outdoor activities</h1>
-			<p>Many outdoor activities and sports practices</p>
-			</div>
+		
 		</Carousel.Caption>
 		</Carousel.Item>
 	</Carousel>
