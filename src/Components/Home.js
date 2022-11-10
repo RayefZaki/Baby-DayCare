@@ -6,15 +6,23 @@ import './Home.css'
 import Slid from './Slid'
 import NavbarH from './NavbarH'
 import WEBHOME from './WEBHOME'
+import { Center } from '@chakra-ui/react'
+import "./Search.css"
 export default function Home() {
   return (
     <div>
 
 <Navbar/>
-
-      <Slid/>
-      <Search />
+<div className='anm-img'>
+<div className='opa'>
+			<Center><h1>outdoor activities</h1></Center>
+			<Center><p>Many outdoor activities and sports practices</p></Center>
+			</div>
+</div>
+      {/* <Slid/> */}
       <WEBHOME/>
+
+      <Search />
       <Footer />
     </div>
   )

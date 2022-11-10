@@ -6,7 +6,7 @@ export default function App() {
 return (
 	<div style={{ display: 'block', width: 1348, height:500,padding: 1 ,marginBottom:150}}>
 	<Carousel>
-		<Carousel.Item interval={1500}>
+		<Carousel.Item interval={2500}>
 		<img height={"100"}
 			className="d-block w-100"
 src="https://cdn.discordapp.com/attachments/1032613167446102037/1039820608990613594/pexels-pavel-danilyuk-8422207.jpg"
@@ -19,7 +19,7 @@ src="https://cdn.discordapp.com/attachments/1032613167446102037/1039820608990613
 			</div>
 		</Carousel.Caption>
 		</Carousel.Item>
-		<Carousel.Item interval={1500}>
+		<Carousel.Item interval={2500}>
 		<img
 			className="d-block w-100"
 src="https://cdn.discordapp.com/attachments/1032613167446102037/1039820545484656670/pexels-cdc-3992949.jpg"
@@ -32,17 +32,14 @@ src="https://cdn.discordapp.com/attachments/1032613167446102037/1039820545484656
 			</div>
 		</Carousel.Caption>
 		</Carousel.Item  >
-		<Carousel.Item interval={1500}>
+		<Carousel.Item interval={2500}>
 		<img
 			className="d-block w-100"
 src="https://cdn.discordapp.com/attachments/1032613167446102037/1039820507844968548/pexels-lukas-296301.jpg"
 			alt="Image One"
 		/>
 		<Carousel.Caption>
-		<div className='opa'>
-			<h1>outdoor activities</h1>
-			<p>Many outdoor activities and sports practices</p>
-			</div>
+		
 		</Carousel.Caption>
 		</Carousel.Item>
 	</Carousel>

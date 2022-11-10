@@ -83,7 +83,7 @@ export default function Search(){
                   objectFit="cover"
                   boxSize="100%"
                   src={
-                    "https://cdn.discordapp.com/attachments/1032613167446102037/1039860005542821928/Cute_Colorful_Baby_Daycare_Center_Logo_1.png"
+                    "https://cdn.discordapp.com/attachments/1032613167446102037/1040008091682488392/pexels-yan-krukov-8613319.jpg"
                   }
                 />
               </Flex >
